@@ -5,7 +5,7 @@ Here is my [blog](https://mrchens.github.io)
 
 
 
-## 💬  Language in use
+## 💬  Language In Use
 
 - ✅ ⁠ ⁢⁣⁡⁠ ⁢⁣⁡Objective-C
 - ✅ ⁠ ⁢⁣⁡⁠ a litter ⁢⁣⁡Python & Shell
