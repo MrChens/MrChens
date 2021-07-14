@@ -21,7 +21,13 @@ Here is my [blog](https://mrchens.github.io)
 - 🌱 I’m currently learning iOS, Design
 - 🔭 I'm plan to learn swift & Illustrator & JavaScript
 
+## Recommended books & IDE
+### Book
+- [JavaScript](https://github.com/GitbookIO/javascript)
+<!-- - [Python](https://github.com/walter201230/Python) -->
 
+### IDE
+- PyCharm CE
 <!--
 **MrChens/MrChens** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
