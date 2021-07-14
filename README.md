@@ -5,12 +5,12 @@ Here is my [blog](https://mrchens.github.io)
 
 
 
-## 💬  Language In Use
+## 💬  Language In use
 
 - ✅ ⁠ ⁢⁣⁡⁠ ⁢⁣⁡Objective-C
 - ✅ ⁠ ⁢⁣⁡⁠ a litter ⁢⁣⁡Python & Shell
 
-## 📮 How to reach me
+## 📮 How to contact me
 
 - WeChat:[Gakkiers](wechat://Gakkier)
 - Email:[Follow Up Here](mailto:mr_chens_job@outlook.com)
@@ -21,7 +21,7 @@ Here is my [blog](https://mrchens.github.io)
 - 🌱 I’m currently learning iOS, Design
 - 🔭 I'm plan to learn swift & Illustrator & JavaScript
 
-## Recommended books & IDE
+## 🎓 Recommended books & IDE
 ### Book
 - [JavaScript](https://github.com/GitbookIO/javascript)
 <!-- - [Python](https://github.com/walter201230/Python) -->
