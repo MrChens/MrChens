@@ -19,7 +19,7 @@ Here is my [blog](https://mrchens.github.io)
 - 💼 I’m currently working on [MeetYou](https://www.meiyou.com)
 - ⚡  I'm currently interested in [handshake](https://www.namebase.io/about/) wich will create an Internet that’s more secure, censorship-resistant, seizure-resistant, private, and truly-owned by individuals not corporations.
 - 🌱 I’m currently learning iOS, Design
-- 🔭 I'm plan to learn swift & Illustrator & 
+- 🔭 I'm plan to learn swift & Illustrator & JavaScript
 
 
 <!--
