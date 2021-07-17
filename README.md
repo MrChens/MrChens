@@ -21,13 +21,17 @@ Here is my [blog](https://mrchens.github.io)
 - 🌱 I’m currently learning iOS, Design
 - 🔭 I'm plan to learn swift & Illustrator 
 
-## 🎓 Recommended books & IDE
+## 🎓 Recommended books & IDE & Study link
 ### Book
 - [JavaScript](https://github.com/GitbookIO/javascript)
 <!-- - [Python](https://github.com/walter201230/Python) -->
 
 ### IDE
 - PyCharm CE
+
+## Study link
+- [freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)
+- [javascript freecodecamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 <!--
 **MrChens/MrChens** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
