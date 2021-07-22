@@ -33,6 +33,7 @@ Here is my [blog](https://mrchens.github.io)
 - [freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)
 - [javascript freecodecamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 - [coding-interview-university](https://github.com/jwasham/coding-interview-university)
+- [learn-python](https://github.com/trekhleb/learn-python)
 <!--
 **MrChens/MrChens** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
