@@ -1,9 +1,8 @@
+
+
+
 ## Hi there 👋
 Here is my [blog](https://mrchens.github.io)
-
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=MrChens&show_icons=true&icon_color=0366d6&text_color=24292e&bg_color=ffffff&hide_title=true" />
-
-
 
 ## 💬  Language In use
 
@@ -34,6 +33,12 @@ Here is my [blog](https://mrchens.github.io)
 - [javascript freecodecamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
 - [coding-interview-university](https://github.com/jwasham/coding-interview-university)
 - [learn-python](https://github.com/trekhleb/learn-python)
+
+
+<li>
+<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact"/>
+<img align="left" src="https://github-readme-stats.vercel.app/api?username=MrChens&show_icons=true&icon_color=0366d6&text_color=24292e&bg_color=ffffff&hide_title=true&layout=compact" />
+</li>
 <!--
 **MrChens/MrChens** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
