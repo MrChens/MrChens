@@ -1,6 +1,6 @@
 
 
-
+![ ](https://komarev.com/ghpvc/?username=MrChens)
 ## Hi there 👋
 Here is my [blog](https://mrchens.github.io)
 
@@ -34,13 +34,14 @@ Here is my [blog](https://mrchens.github.io)
 - [coding-interview-university](https://github.com/jwasham/coding-interview-university)
 - [learn-python](https://github.com/trekhleb/learn-python)
 
-
-<li>
-  ![ ](https://komarev.com/ghpvc/?username=MrChens)
-  [![trophy](https://github-profile-trophy.vercel.app/?username=MrChens)](https://github.com/ryo-ma/github-profile-trophy)
-<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact"/>
-<img align="left" src="https://github-readme-stats.vercel.app/api?username=MrChens&show_icons=true&icon_color=0366d6&text_color=24292e&bg_color=ffffff&hide_title=true&layout=compact" />
-</li>
+----
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact)
+![](https://github-readme-stats.vercel.app/api?username=MrChens&show_icons=true&icon_color=0366d6&text_color=24292e&bg_color=ffffff&hide_title=true&layout=compact)
+----
+### Profile Trophies
+----
+[![trophy](https://github-profile-trophy.vercel.app/?username=MrChens)](https://github.com/ryo-ma/github-profile-trophy)
+----
 <!--
 **MrChens/MrChens** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
