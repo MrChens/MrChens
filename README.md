@@ -36,6 +36,8 @@ Here is my [blog](https://mrchens.github.io)
 
 
 <li>
+  ![ ](https://komarev.com/ghpvc/?username=MrChens)
+  [![trophy](https://github-profile-trophy.vercel.app/?username=MrChens)](https://github.com/ryo-ma/github-profile-trophy)
 <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact"/>
 <img align="left" src="https://github-readme-stats.vercel.app/api?username=MrChens&show_icons=true&icon_color=0366d6&text_color=24292e&bg_color=ffffff&hide_title=true&layout=compact" />
 </li>
