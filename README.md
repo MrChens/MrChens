@@ -1,6 +1,7 @@
 
 
 ![ ](https://komarev.com/ghpvc/?username=MrChens)
+<!-- count - 1000 is the real count hahhaha -->
 ## Hi there 👋
 Here is my [blog](https://mrchens.github.io)
 
