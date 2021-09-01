@@ -37,6 +37,7 @@ Here is my [blog](https://mrchens.github.io)
 - [30 days of Python programming challenge](https://github.com/Asabeneh/30-Days-Of-Python)
 - [12 Weeks, Get Started as a Web Developer](https://github.com/microsoft/Web-Dev-For-Beginners)
 - [12 Weeks,IoT for beginners](https://github.com/microsoft/IoT-For-Beginners)
+- [Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club)
 
 ----
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact)
