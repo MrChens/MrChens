@@ -1318,7 +1318,7 @@ primes.forEach { print($0) }
 
        ---
 
-       
+       <div align="center">
 
        <img align="left" src="./img/swift_basic/memory_value1.png" width="25%" height="30%">
 
@@ -1328,7 +1328,7 @@ primes.forEach { print($0) }
 
        <img align="left" src="./img/swift_basic/memory_value2.png" width="25%" height="30%">
 
-       ![](./img/swift_basic/memory_value2.png)
+       </div>
 
        
 
