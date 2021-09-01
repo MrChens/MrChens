@@ -1335,6 +1335,12 @@ Swift Apprentice
 
        
 
+       ---
+
+       
+
+       
+
        1. The heap vs. the stack
 
        When you create a reference type such as class, the system stores the actual instance in a region of memory known as the `heap`. Instances of a value type such as a struct resides in a region of memory called the `stack`, unless the value is part of a class instance, in which case the value is tored on the heap with the rest of the class instance.
