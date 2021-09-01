@@ -1176,7 +1176,7 @@ primes.forEach { print($0) }
 
 
 
-    <img align="left" src="./img/swift_basic/method.png" width="25%" height="30%">
+    <img align="center" src="./img/swift_basic/method.png" width="25%" height="30%">
 
 
 
