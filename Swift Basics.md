@@ -1192,7 +1192,13 @@ Swift Apprentice
 
     self: access the value of an instance. most of the time you don't need to, you can just use a variable name.
 
+    ---
+
     <img align="left" src="./img/swift_basic/method.png" width="25%" height="30%">
+
+    ---
+
+    
 
     
 
@@ -1329,7 +1335,15 @@ Swift Apprentice
        var var4 = var3
        ```
 
+       ---
+
+       
+
        <img align="left" src="./img/swift_basic/memory_value1.png" width="25%" height="30%">
+
+       ---
+
+       
 
        <img align="left" src="./img/swift_basic/memory_value2.png" width="25%" height="30%">
 
