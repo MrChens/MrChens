@@ -1316,39 +1316,39 @@ primes.forEach { print($0) }
        var var4 = var3
        ```
 
-       ---
 
-<center>
-<img align="left" src="./img/swift_basic/memory_value1.png" width="25%" height="30%">
-<img align="right" src="./img/swift_basic/memory_value2.png" width="25%" height="30%">
-</center>
 
-       
+<img src="./img/swift_basic/memory_value1.png" width="25%" height="30%">
 
+<img src="./img/swift_basic/memory_value2.png" width="25%" height="30%">
+
+
+   
        1. The heap vs. the stack
-
+       
        When you create a reference type such as class, the system stores the actual instance in a region of memory known as the `heap`. Instances of a value type such as a struct resides in a region of memory called the `stack`, unless the value is part of a class instance, in which case the value is tored on the heap with the rest of the class instance.
 
-       
 
+​       
+​       
        - The system uses the stack to store anything on the immediate thread of execution; it's tightly managed and optimized by the CPU. A function allocates stack variables on entry and deallocates them on exit. Since the stack is so strictly organized, it's very efficient.
        - The system uses the heap to store instances of reference types. The heap is generally a large pool of memory from which the system can request and dynamically allocate memory blocks. Lifetime is flexible and dynamic.
-
+       
        The heap doesn't automatically destroy its data like the stack does;
-
+       
        additional work is required to do that. This makes creating and removing data on the heap a slower process, compared to on the stack.
-
+       
        - When you create an instance of a class, your code requests a  lock of memory on the heap to store the instance itself; That's the property inside the instance on the heap. It stores the address of that memory in your named variable on the stack.
        - When you create an instance of a struct(that is not part of an instance of a class), the instance itself is stored on the stack, and the hepa is never involved.
-
+       
        Object identity
-
+       
        ===, lets you ckeck if the identity of one object is equal to the identity of another.
-
+       
        Just as the == operator checks if two values are equal, the === identity operator compares the momory address of two references. It tells you whether the value of the references are the same; that is, they point to the same block of data on the heap.
-
+       
        Methods and mutability
-
+       
        ```swift
        /*When you change the value of a struct, instead of modifying the value, you're making a new value. The keyword mutating marks methods that replace the current value with a new one. With classes, this keyword is not used because the instance itself is mutable.
        */
@@ -1393,30 +1393,30 @@ primes.forEach { print($0) }
            }
        }
        ```
-
+       
        Speed (structs rely on the faster stack while classes rely on the slower heap.)
-
+       
        - If you'll have many more instances, or if these instances will only exist in memory for a short time, use struct
        - If your instance will have a longer lifecycle in memory, or if you'll create relatively few instances, then class instances on the heap shouldn't create much overhead.
-
+       
        Structures vs. classes recap
-
+       
        Structures
-
+       
        - Useful for representing values
        - Implicit copying of values.
        - Becomes completely immutable when declared with let.
        - Fast memory allocation(stack)
-
+       
        Classess
-
+       
        - Useful for representing objects with an identity
        - Implicit sharing of objects
        - Internals can remain mutable even when declared with let
        - Slower memory allocation(heap)
-
+       
     2. Advanced Classes
-
+    
        ```swift
        //inheritance
        //single inheritance
@@ -1615,11 +1615,11 @@ primes.forEach { print($0) }
            weak var partner: Student?
        }
        ```
-
+    
     3. Enumerations
-
+    
        An enumeration can have methods and computed properties, all while acting as a convenient state machine.
-
+    
        ```swift
        enum Month {
            case January
@@ -1782,14 +1782,15 @@ primes.forEach { print($0) }
        
        ```
 
-       
 
+​       
+​    
     4. Protocols
-
+    
        Unlike the other named types, protocols don't define anything you instantiate directly. Instead, they define an interface or blueprint that actual concrete types conform to. With a protocol, you define a common set of properties and behaviors that concrete types go and implement.
-
+    
        A protocol can be adopted by aclass, struct or enum and when another type adopts a protocol, it's required to implement the methods and properties defined in the protocol.
-
+    
        ```swift
        protocol Vehicle {
            func accelerate()
@@ -1983,10 +1984,11 @@ primes.forEach { print($0) }
        }
        ```
 
-       
 
+​       
+​    
     5. Generics,范型
-
+    
        ```swift
        enum PetKind {
            case cat
