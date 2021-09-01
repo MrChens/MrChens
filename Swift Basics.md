@@ -1326,8 +1326,8 @@ primes.forEach { print($0) }
 
    When you create a reference type such as class, the system stores the actual instance in a region of memory known as the `heap`. Instances of a value type such as a struct resides in a region of memory called the `stack`, unless the value is part of a class instance, in which case the value is tored on the heap with the rest of the class instance.       
 
-       - The system uses the stack to store anything on the immediate thread of execution; it's tightly managed and optimized by the CPU. A function allocates stack variables on entry and deallocates them on exit. Since the stack is so strictly organized, it's very efficient.
-              - The system uses the heap to store instances of reference types. The heap is generally a large pool of memory from which the system can request and dynamically allocate memory blocks. Lifetime is flexible and dynamic.
+   - The system uses the stack to store anything on the immediate thread of execution; it's tightly managed and optimized by the CPU. A function allocates stack variables on entry and deallocates them on exit. Since the stack is so strictly organized, it's very efficient.
+   - The system uses the heap to store instances of reference types. The heap is generally a large pool of memory from which the system can request and dynamically allocate memory blocks. Lifetime is flexible and dynamic.
 
    The heap doesn't automatically destroy its data like the stack does;
 
@@ -1338,9 +1338,9 @@ primes.forEach { print($0) }
 
    Object identity
 
-   ===, lets you ckeck if the identity of one object is equal to the identity of another.
+   `===`, lets you ckeck if the identity of one object is equal to the identity of another.
 
-   Just as the == operator checks if two values are equal, the === identity operator compares the momory address of two references. It tells you whether the value of the references are the same; that is, they point to the same block of data on the heap.
+   Just as the == operator checks if two values are equal, the `===` identity operator compares the momory address of two references. It tells you whether the value of the references are the same; that is, they point to the same block of data on the heap.
 
    Methods and mutability
 
