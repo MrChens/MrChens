@@ -482,9 +482,9 @@ Swift Apprentice
 
 
     1. arrays,
-
+    
        when you want to store your items in a particular order.
-
+    
        ```swift
        /*
        Since the array literal only contains integers, Swift infers the type of evenNumbers to be an array of Int values. This type is written as [Int]. The type inside the square brackets defines the type of values the array can store, which the compiler will enforce when you add elements to the array.
@@ -546,14 +546,15 @@ Swift Apprentice
        
        ```
 
-       
+
+​       
 
     2. dictionaries
-
+    
        A dictionary is an unordered collection of pairs, where each pair comprises a key and a value.
-
+    
        All keys have to be of the same type, and all values have to be of the same type.
-
+    
        ```swift
        //Creating dictionaries
        //dictionary literal
@@ -597,12 +598,13 @@ Swift Apprentice
        
        ```
 
-       
+
+​       
 
     3. sets
-
+    
        A set is an unordered collection of unique values of the same type.
-
+    
        ```swift
        //Creating sets
        let setOne: Set<Int> = [1]
@@ -616,26 +618,28 @@ Swift Apprentice
        // remove(_:), returns the removed element if it's in the set, or nil otherwise
        someSet.insert(5)
        someSet.remove(1)
-       
-       
+
+
+​       
        ```
 
-       
 
-    
+​       
 
-    
+​    
+
+​    
 
     Collection Iteration with Closures
-
+    
     A closure is simply a function with no name; you can assign it to a variable and pass it around like any other value.
-
+    
     1. Closure basics
-
+    
     Closures are so named because they can "close over" the variables and constants within the closure's own scope. This simply means that a closure can access the values of any variable or constant from the surrounding context. Variables and constants used within the body of a closure are said to have been captured by the closure.
-
+    
     To use a closure, you first have to assign it to a variable or constant.
-
+    
     ```swift
     //declaration of a variable that can hold a closure an initialized
     var multiplyClosure: (Int, Int) ->Int = { (a: Int, b: Int) -> Int in
@@ -878,11 +882,12 @@ Swift Apprentice
     
     ```
 
-    
 
-    
+​    
 
-    
+​    
+
+​    
 
 
     1. strings
@@ -1187,7 +1192,7 @@ Swift Apprentice
 
     self: access the value of an instance. most of the time you don't need to, you can just use a variable name.
 
-    <img align="left" src="/Users/zerlz/Desktop/Screen Shot 2021-08-02 at 10.01.48 PM.png" width="25%" height="30%">
+    <img align="left" src="./img/swift_basic/method.png" width="25%" height="30%">
 
     ```swift
     //Initializers
