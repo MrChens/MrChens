@@ -480,417 +480,398 @@ Swift Apprentice
 
     Arrays, Dictionaries, Sets
 
+1. arrays,
 
-    1. arrays,
-    
-       when you want to store your items in a particular order.
-    
-       ```swift
-       /*
-       Since the array literal only contains integers, Swift infers the type of evenNumbers to be an array of Int values. This type is written as [Int]. The type inside the square brackets defines the type of values the array can store, which the compiler will enforce when you add elements to the array.
-       */
-       //Creating arrays
-       let evenNumbers = [2, 4, 6,8]
-       var subscribers: [String] = []
-       let allZeros = Array(repeating: 0, count: 5)//[0, 0, 0, 0, 0]
-       let vowels = ["A", "E", "I", "O", "U"]
-       /*
-       Accessing elements
-       1. Using properties and method
-       */
-       vowels.isEmpty
-       vowels.count
-       vowels.first
-       vowels.last
-       vowels.min()
-       vowels.max()
-       print(vowels as Any)
-       print(vowels.first as Any)
-       print([2,1,3].first as Any)
-       vowels[0]
-       //using countable ranges to make an arrayslice
-       let upcomingPlayersSlice = vowels[1...2]//["E", "I"]
-       let upcomingPlayersArray = Array(vowels[1...2])
-       //Checking for an element
-       func isEliminated(player: String) -> Bool {
-         !players.contains(player)
-       }
-       //using contains(_:)
-       players[1...3].contains("E")//true
-       /* 
-       Modifying arrays
-       appending elements: using append(_:), +=
-       Inserting elements: insert(_:at:)
-       removing elements: removeLast(),remove(at:)
-       finding elements: firstIndex(of:)
-       updating elements:
-       moving elements: swapAt(_:_:)
-       sorting elements: sorted(), sort()
-       //if you'd like to leave the original array untouched and return a sorted copy instead, use sorted() instead of sort().
-       */
-       players.append("G")
-       players += ["G"]
-       players.insert("G", at: 0)
-       players.removeLast()
-       players.remove(at:2)
-       print(vowels.firstIndex(of: "Y") as Any)//nil
-       vowels[0...1] = ["$", "3"]//be careful to not use an index beyond the bounds of the array, or your code will crash.
-       vowels.swapAt(1,3)
-       
-       /*
-       Iterating through an array
-       */
-       // from index 0 up to players.count
-       for player in players { print(player) }
-       for (index, player) in players.enumerated() { print("\(index) \(player)")}
-       
-       ```
-
-
-​       
-
-    2. dictionaries
-    
-       A dictionary is an unordered collection of pairs, where each pair comprises a key and a value.
-    
-       All keys have to be of the same type, and all values have to be of the same type.
-    
-       ```swift
-       //Creating dictionaries
-       //dictionary literal
-       var namesAndScores = ["anna": 2, "Brian": 2]
-       //empty dictionary literal
-       namesAndScoures = [:]
-       var namesAndScoures: [String: Int] = [:]
-       namesAndScoures.reserveCapacity(4)
-       /*
-       Accessing values
-       using subscripting
-       */
-       namesAndScoures["anna"]// 2
-       namesAndScoures["222"]// nil
-       //using properties and methods
-       namesAndScoures.isEmpty
-       namesAndScoures.count
-       /*
-       Modifying dictionaries
-       Adding pairs: updateValue(_:_)
-       updating values: updateValue(_: forKey:)
-       removing pairs: removeValue(forKey:)
-       */
-       //the dictionary is of type [String: Int], and it's mutable because it's assigned to avariable.
-       namesAndScoures.updateValue("bb": 4)
-       namesAndScoures["dd"] = 3
-       //replaces the value of the given key with the new value and returns the old value. If the key doesn’t exist, this method will add a new pair and return nil.
-       namesAndScoures.updateValue("anna", forKey:5)//return 2
-       namesAndScoures["anna"] = 3
-       namesAndScoures.removeValue(forKey: "anna")
-       //If you’re using a dictionary that has values that are optional types, dictionary[key] = nil still removes the key completely. If you want keep the key and set the value to nil you must use the updateValue method.
-       namesAndScoures["anna"] = nil
-       
-       //Iterating through dictionaries
-       for (player, score) in namesAndScoures {
-         print("\(player) - \(score)")
-       }
-       for player in namesAndScores.keys {
-         
-       }
-       
-       ```
+   when you want to store your items in a particular order.
+   
+   ```swift
+   /*
+   Since the array literal only contains integers, Swift infers the type of evenNumbers to be an array of Int values. This type is written as [Int]. The type inside the square brackets defines the type of values the array can store, which the compiler will enforce when you add elements to the array.
+   */
+   //Creating arrays
+   let evenNumbers = [2, 4, 6,8]
+   var subscribers: [String] = []
+   let allZeros = Array(repeating: 0, count: 5)//[0, 0, 0, 0, 0]
+   let vowels = ["A", "E", "I", "O", "U"]
+   /*
+   Accessing elements
+   1. Using properties and method
+   */
+   vowels.isEmpty
+   vowels.count
+   vowels.first
+   vowels.last
+   vowels.min()
+   vowels.max()
+   print(vowels as Any)
+   print(vowels.first as Any)
+   print([2,1,3].first as Any)
+   vowels[0]
+   //using countable ranges to make an arrayslice
+   let upcomingPlayersSlice = vowels[1...2]//["E", "I"]
+   let upcomingPlayersArray = Array(vowels[1...2])
+   //Checking for an element
+   func isEliminated(player: String) -> Bool {
+     !players.contains(player)
+   }
+   //using contains(_:)
+   players[1...3].contains("E")//true
+   /* 
+   Modifying arrays
+   appending elements: using append(_:), +=
+   Inserting elements: insert(_:at:)
+   removing elements: removeLast(),remove(at:)
+   finding elements: firstIndex(of:)
+   updating elements:
+   moving elements: swapAt(_:_:)
+   sorting elements: sorted(), sort()
+   //if you'd like to leave the original array untouched and return a sorted copy instead, use sorted() instead of sort().
+   */
+   players.append("G")
+   players += ["G"]
+   players.insert("G", at: 0)
+   players.removeLast()
+   players.remove(at:2)
+   print(vowels.firstIndex(of: "Y") as Any)//nil
+   vowels[0...1] = ["$", "3"]//be careful to not use an index beyond the bounds of the array, or your code will crash.
+   vowels.swapAt(1,3)
+   
+   /*
+   Iterating through an array
+   */
+   // from index 0 up to players.count
+   for player in players { print(player) }
+   for (index, player) in players.enumerated() { print("\(index) \(player)")}
+   
+   ```
 
 
 ​       
 
-    3. sets
-    
-       A set is an unordered collection of unique values of the same type.
-    
-       ```swift
-       //Creating sets
-       let setOne: Set<Int> = [1]
-       //Set literals
-       var explicitSet: Set<Int> = [1, 3, 3]//{1, 3}
-       var someSet = Set([1, 2, 3])
-       //Accessing elements
-       someSet.contains(1)
-       //Adding and removing elements
-       // insert(_:) 
-       // remove(_:), returns the removed element if it's in the set, or nil otherwise
-       someSet.insert(5)
-       someSet.remove(1)
+2. dictionaries
+
+   A dictionary is an unordered collection of pairs, where each pair comprises a key and a value.
+
+   All keys have to be of the same type, and all values have to be of the same type.
+
+   ```swift
+   //Creating dictionaries
+   //dictionary literal
+   var namesAndScores = ["anna": 2, "Brian": 2]
+   //empty dictionary literal
+   namesAndScoures = [:]
+   var namesAndScoures: [String: Int] = [:]
+   namesAndScoures.reserveCapacity(4)
+   /*
+   Accessing values
+   using subscripting
+   */
+   namesAndScoures["anna"]// 2
+   namesAndScoures["222"]// nil
+   //using properties and methods
+   namesAndScoures.isEmpty
+   namesAndScoures.count
+   /*
+   Modifying dictionaries
+   Adding pairs: updateValue(_:_)
+   updating values: updateValue(_: forKey:)
+   removing pairs: removeValue(forKey:)
+   */
+   //the dictionary is of type [String: Int], and it's mutable because it's assigned to avariable.
+   namesAndScoures.updateValue("bb": 4)
+   namesAndScoures["dd"] = 3
+   //replaces the value of the given key with the new value and returns the old value. If the key doesn’t exist, this method will add a new pair and return nil.
+   namesAndScoures.updateValue("anna", forKey:5)//return 2
+   namesAndScoures["anna"] = 3
+   namesAndScoures.removeValue(forKey: "anna")
+   //If you’re using a dictionary that has values that are optional types, dictionary[key] = nil still removes the key completely. If you want keep the key and set the value to nil you must use the updateValue method.
+   namesAndScoures["anna"] = nil
+   
+   //Iterating through dictionaries
+   for (player, score) in namesAndScoures {
+     print("\(player) - \(score)")
+   }
+   for player in namesAndScores.keys {
+     
+   }
+   
+   ```
 
 
 ​       
-       ```
 
+3. sets
 
-​       
+   A set is an unordered collection of unique values of the same type.
+
+   ```swift
+   //Creating sets
+   let setOne: Set<Int> = [1]
+   //Set literals
+   var explicitSet: Set<Int> = [1, 3, 3]//{1, 3}
+   var someSet = Set([1, 2, 3])
+   //Accessing elements
+   someSet.contains(1)
+   //Adding and removing elements
+   // insert(_:) 
+   // remove(_:), returns the removed element if it's in the set, or nil otherwise
+   someSet.insert(5)
+   someSet.remove(1)
+
 
 ​    
 
-​    
+Collection Iteration with Closures
 
-    Collection Iteration with Closures
-    
-    A closure is simply a function with no name; you can assign it to a variable and pass it around like any other value.
-    
-    1. Closure basics
-    
-    Closures are so named because they can "close over" the variables and constants within the closure's own scope. This simply means that a closure can access the values of any variable or constant from the surrounding context. Variables and constants used within the body of a closure are said to have been captured by the closure.
-    
-    To use a closure, you first have to assign it to a variable or constant.
-    
-    ```swift
-    //declaration of a variable that can hold a closure an initialized
-    var multiplyClosure: (Int, Int) ->Int = { (a: Int, b: Int) -> Int in
-        return a * b
-    }
-    var multiplyClosures = { (a: Int, b: Int) -> Int in
-        return a * b
-    }
-    multiplyClosure(3, 4)//12
-    //Shorthand syntax
-    var multiplyClosures1: (Int, Int) ->Int
-    multiplyClosures1 = { (a, b) in 
-    	a * b     
-    }
-    //you can even omit the parameter list if you want. Swift lets you refer to each parameter by number, starting at zero, like so:
-    // only be used when the closure is short and sweet
-    multiplyClosures1 = {
-      $0 * $1
-    }
-    func addFunction(_ a: Int,_ b: Int) -> Int {
-      $0 + $1
-    }
-    //The third parameter is named operation and is of a function type.
-    func operateOnNumbers(_ a: Int, _ b: Int,
-                          operation: (Int, Int) -> Int) -> Int {
-        let result = operation(a, b)
-        return result
-    }
-    operateOnNumbers(2, 3, operation: multiplyClosure)//6
-    operateOnNumbers(2, 3, operation: addFunction)//5
-    
-    operateOnNumbers(4, 2, operation: { (a: Int, b: Int) -> Int in
-        return a * b
-    })
-    //reduce the above to the following
-    operateOnNumbers(4, 2, operation: {$0 + $1})
-    operateOnNumbers(4, 2, operation: +)
-    //This is called trailing closure syntax, it can only be done when the closure is the final parameter passed to a function. move the closure outside of the function call:
-    operateOnNumbers(4, 2) {
-        $0 + $1
-    }
-    //Multiple trailing closures syntax
-    func sequenced(first: ()->Void, second: ()->Void) {
-        first()
-        second()
-    }
-    //type in the name of the method(or code complete it) and then press the return key twice.
-    sequenced {
-        print("first")
-    } second: {
-        print("second")
-    }
-    //Closures with no return value
-    //the closure's type is () -> Void
-    // Void is actually just a typealias for (), This means you could have written() -> Void as () -> (). A function's parameter list however must always be surrounded by parentheses, so Void -> () or Void -> Void are invalid.
-    let voidClosure:() -> Void = {
-        print("good")
-    }
-    voidClosure()
-    
-    //Capturing from the enclosing scope
-    //The closure is able to access the variable because the closure is defined in the same scope as the variable. The closure is said to capture the counter variable. Any changes it makes to the variable are visible both inside and outside the closure.
+A closure is simply a function with no name; you can assign it to a variable and pass it around like any other value.
+
+1. Closure basics
+
+Closures are so named because they can "close over" the variables and constants within the closure's own scope. This simply means that a closure can access the values of any variable or constant from the surrounding context. Variables and constants used within the body of a closure are said to have been captured by the closure.
+
+To use a closure, you first have to assign it to a variable or constant.
+
+```swift
+//declaration of a variable that can hold a closure an initialized
+var multiplyClosure: (Int, Int) ->Int = { (a: Int, b: Int) -> Int in
+    return a * b
+}
+var multiplyClosures = { (a: Int, b: Int) -> Int in
+    return a * b
+}
+multiplyClosure(3, 4)//12
+//Shorthand syntax
+var multiplyClosures1: (Int, Int) ->Int
+multiplyClosures1 = { (a, b) in 
+	a * b     
+}
+//you can even omit the parameter list if you want. Swift lets you refer to each parameter by number, starting at zero, like so:
+// only be used when the closure is short and sweet
+multiplyClosures1 = {
+  $0 * $1
+}
+func addFunction(_ a: Int,_ b: Int) -> Int {
+  $0 + $1
+}
+//The third parameter is named operation and is of a function type.
+func operateOnNumbers(_ a: Int, _ b: Int,
+                      operation: (Int, Int) -> Int) -> Int {
+    let result = operation(a, b)
+    return result
+}
+operateOnNumbers(2, 3, operation: multiplyClosure)//6
+operateOnNumbers(2, 3, operation: addFunction)//5
+
+operateOnNumbers(4, 2, operation: { (a: Int, b: Int) -> Int in
+    return a * b
+})
+//reduce the above to the following
+operateOnNumbers(4, 2, operation: {$0 + $1})
+operateOnNumbers(4, 2, operation: +)
+//This is called trailing closure syntax, it can only be done when the closure is the final parameter passed to a function. move the closure outside of the function call:
+operateOnNumbers(4, 2) {
+    $0 + $1
+}
+//Multiple trailing closures syntax
+func sequenced(first: ()->Void, second: ()->Void) {
+    first()
+    second()
+}
+//type in the name of the method(or code complete it) and then press the return key twice.
+sequenced {
+    print("first")
+} second: {
+    print("second")
+}
+//Closures with no return value
+//the closure's type is () -> Void
+// Void is actually just a typealias for (), This means you could have written() -> Void as () -> (). A function's parameter list however must always be surrounded by parentheses, so Void -> () or Void -> Void are invalid.
+let voidClosure:() -> Void = {
+    print("good")
+}
+voidClosure()
+
+//Capturing from the enclosing scope
+//The closure is able to access the variable because the closure is defined in the same scope as the variable. The closure is said to capture the counter variable. Any changes it makes to the variable are visible both inside and outside the closure.
+var counter = 0
+let incrementCounter = {
+    counter + 1
+}
+incrementCounter()
+
+func countingClosure() -> () -> Int {
     var counter = 0
-    let incrementCounter = {
-        counter + 1
+    let incrementCounter: () -> Int = {
+        counter += 1
+        return counter
     }
-    incrementCounter()
-    
-    func countingClosure() -> () -> Int {
-        var counter = 0
-        let incrementCounter: () -> Int = {
-            counter += 1
-            return counter
-        }
-        return incrementCounter
-    }
-    
-    let counter1 = countingClosure()
-    let counter2 = countingClosure()
-    
-    counter1()//1
-    counter2()//1
-    counter1()//2
-    counter1()//3
-    counter2()//2
-    
-    //Custom sorting with closures
-    let names = ["a", "c", "b", "d"]
-    names.sorted()//["a", "b", "c", "d"]
-    print(names.sorted {
-        $0 > $1
-    })//["d", "c", "b", "a"]
-    names//["a", "c", "b", "d"]
-    
-    //Iterating over collections with closures
-    names.forEach { empty in
-        print("value:\(empty)")
-    }
-    names.forEach {
-        print("value2:\($0)")
-    }
-    /*
-    filter
-    map
-    reduce
-    
-    compactMap
-    flatMap
-    first
-    */
-    
-    //the filter function then returns an array of Elements
-    //The closure's job is to return true or false depending on whether or not the value should be kept or not.
-    //The array returned from filter will contain all elements for which the closure returned true.
-    //The array that is returned from filter(and all of these functions) is a new array. The original is not modified at all.
-    let beforeAs = names.filter {
-        $0 > "a"
-    }
-    let beforeAs1 = names.filter { temp in
-        temp > "a"
-    }
-    print(beforeAs)//["c", "b", "d"]
-    print(beforeAs1)//["c", "b", "d"]
-    //only interested in the first element that satifies a certaion condition, use first(where:)
-    let largeAlpha = names.first { emp  in
-        emp > "b"
-    }
-    let largeAlphab = names.first {
-        $0 > "b"
-    }
-    print(largeAlpha as Any)//Optional("c")
-    print(largeAlphab as Any)//Optional("c")
-    //The map function will take a closure, execute it on each item in the array and return a new array containing each result with the order maintained. In this case
-    let appends = names.map { emp in
-        emp + "c"
-    }
-    let appendsC = names.map {
-        $0 + "c"
-    }
-    let changes = names.map {
-        //Int($0)
-        [$0]
-    }
-    print(appends)
-    print(appendsC)
-    print(changes)//[["a"], ["c"], ["b"], ["d"]]
-    //if you want to filter out the invalid(missing) values, you can use compactMap
-    let anyArray = ["2", "4", "e", "#"]
-    
-    let numbers = anyArray.compactMap{
-        Int($0)
-    }
-    print(numbers)//[2, 4]
-    
-    //Swift expects the return value from the closure given to flatMap to be a collection itself. What it does then takes all these collections and concatenates them together. 
-    //So in this case, it's done the trick of unwrapping those inner collections. We end up with a collection containing all the items from the first inner collection, then all the items from the second inner collection, and so on.
-    let nestedArrays = [["0", "1"], ["a", "b", "c"], ["cat"]]
-    let unwrapInnerCollections = nestedArrays.flatMap {
-        $0
-    }
-    print(unwrapInnerCollections)//["0", "1", "a", "b", "c", "cat"]
-    //This function takes a starting value and a closure. 
-    //The closure takes two values: the current value and an element from the array. 
-    //The closure returns the next value that should be passed into the closure as the current value parameter
-    let prices = [2, 2, 3, 3, 4, 4]
-    let sum = prices.reduce(-4) { res, emp in
-        emp + res
-    }
-    let sum1 = prices.reduce(-4) {
-     $0 + $1
-    }
-    print(sum)//14
-    print(sum1)//14
-    
-    let stock = [1.5: 5, 10:2, 4.99:3]
-    let stockSum = stock.reduce(0) { rest , dic in
-        return rest + dic.key * Double(dic.value)
-    }
-    let stockSum1 = stock.reduce(0) {
-        $0 + $1.key * Double($1.value)
-    }
-    print(stockSum1)//42.47
-    print(stockSum)//42.47
-    
-    //There’s another form of reduce named reduce(into:_:). You’d use it when the result you’re reducing a collection into is an array or dictionary
-    let farmAnimals = ["🐎": 5, "🐄": 10, "🐑": 50, "🐶": 1]
-    
-    let allAnimals = farmAnimals.reduce(into: []) { (result, this: (key: String, value: Int)) in
-        for _ in 0 ..< this.value {
-            result.append(this.key)
-        }
-    }
-    
-    let allAnimals1 = farmAnimals.reduce(into: []) {
-        for _ in 0 ..< $1.value {
-            $0.append($1.key)
-        }
-    }
-    //The dropFirst function takes a single parameter that defaults to 1 and returns an array with the required number of elements removed from the front
-    var prices = [2, 2, 3, 3, 4, 4]
-    prices.dropFirst()
-    prices.dropFirst(3)
-    prices.dropLast()
-    prices.dropLast(3)
-    prices.prefix(2)
-    prices.suffix(2)
-    prices.removeAll() { $0 > 3}//remove 44
-    prices.removeAll()
-    
-    //Lazy collections
-    //Lazy collections are extremely useful when the collection is huge (even infinite) or expensive to generate. It saves the computation until precisely when it is needed.
-    func isPrime(_ number: Int) -> Bool {
-        if number == 1 { return false}
-        if number == 2 || number == 3 { return true}
-        
-        for i in 2...Int(Double(number).squareRoot()) {
-            if number % i == 0 { return false }
-        }
-        return true
-    }
-    
-    //var primes: [Int] = []
-    //var i = 1
-    //while primes.count < 10 {
-    //    if isPrime(i) {
-    //        primes.append(i)
-    //    }
-    //    i += 1
-    //}
-    /*
-    Notice that you start with the completely open-ended collection 1... which means 1 until, well, infinity (or rather the maximum integer that the Int type can hold!). Then you use lazy to tell Swift that you want this to be a lazy collection. Then you use filter() and prefix() to filter out the primes and choose the first ten.
-    At that point, the sequence has not been generated at all. No primes have been checked. It is only on the second statement, the primes.forEach that the sequence is evaluated and the first ten prime numbers are printed out. Neat! :]
-    Lazy collections are extremely useful when the collection is huge (even infinite) or expensive to generate. It saves the computation until precisely when it is needed.
-    */
-    let primes = (1...).lazy
-        .filter { isPrime($0) }
-        .prefix(10)
-        
-    primes.forEach { print($0) }
-    
-    ```
+    return incrementCounter
+}
 
+let counter1 = countingClosure()
+let counter2 = countingClosure()
 
-​    
+counter1()//1
+counter2()//1
+counter1()//2
+counter1()//3
+counter2()//2
 
-​    
+//Custom sorting with closures
+let names = ["a", "c", "b", "d"]
+names.sorted()//["a", "b", "c", "d"]
+print(names.sorted {
+    $0 > $1
+})//["d", "c", "b", "a"]
+names//["a", "c", "b", "d"]
 
-​    
+//Iterating over collections with closures
+names.forEach { empty in
+    print("value:\(empty)")
+}
+names.forEach {
+    print("value2:\($0)")
+}
+/*
+filter
+map
+reduce
 
+compactMap
+flatMap
+first
+*/
 
-    1. strings
+//the filter function then returns an array of Elements
+//The closure's job is to return true or false depending on whether or not the value should be kept or not.
+//The array returned from filter will contain all elements for which the closure returned true.
+//The array that is returned from filter(and all of these functions) is a new array. The original is not modified at all.
+let beforeAs = names.filter {
+    $0 > "a"
+}
+let beforeAs1 = names.filter { temp in
+    temp > "a"
+}
+print(beforeAs)//["c", "b", "d"]
+print(beforeAs1)//["c", "b", "d"]
+//only interested in the first element that satifies a certaion condition, use first(where:)
+let largeAlpha = names.first { emp  in
+    emp > "b"
+}
+let largeAlphab = names.first {
+    $0 > "b"
+}
+print(largeAlpha as Any)//Optional("c")
+print(largeAlphab as Any)//Optional("c")
+//The map function will take a closure, execute it on each item in the array and return a new array containing each result with the order maintained. In this case
+let appends = names.map { emp in
+    emp + "c"
+}
+let appendsC = names.map {
+    $0 + "c"
+}
+let changes = names.map {
+    //Int($0)
+    [$0]
+}
+print(appends)
+print(appendsC)
+print(changes)//[["a"], ["c"], ["b"], ["d"]]
+//if you want to filter out the invalid(missing) values, you can use compactMap
+let anyArray = ["2", "4", "e", "#"]
+
+let numbers = anyArray.compactMap{
+    Int($0)
+}
+print(numbers)//[2, 4]
+
+//Swift expects the return value from the closure given to flatMap to be a collection itself. What it does then takes all these collections and concatenates them together. 
+//So in this case, it's done the trick of unwrapping those inner collections. We end up with a collection containing all the items from the first inner collection, then all the items from the second inner collection, and so on.
+let nestedArrays = [["0", "1"], ["a", "b", "c"], ["cat"]]
+let unwrapInnerCollections = nestedArrays.flatMap {
+    $0
+}
+print(unwrapInnerCollections)//["0", "1", "a", "b", "c", "cat"]
+//This function takes a starting value and a closure. 
+//The closure takes two values: the current value and an element from the array. 
+//The closure returns the next value that should be passed into the closure as the current value parameter
+let prices = [2, 2, 3, 3, 4, 4]
+let sum = prices.reduce(-4) { res, emp in
+    emp + res
+}
+let sum1 = prices.reduce(-4) {
+ $0 + $1
+}
+print(sum)//14
+print(sum1)//14
+
+let stock = [1.5: 5, 10:2, 4.99:3]
+let stockSum = stock.reduce(0) { rest , dic in
+    return rest + dic.key * Double(dic.value)
+}
+let stockSum1 = stock.reduce(0) {
+    $0 + $1.key * Double($1.value)
+}
+print(stockSum1)//42.47
+print(stockSum)//42.47
+
+//There’s another form of reduce named reduce(into:_:). You’d use it when the result you’re reducing a collection into is an array or dictionary
+let farmAnimals = ["🐎": 5, "🐄": 10, "🐑": 50, "🐶": 1]
+
+let allAnimals = farmAnimals.reduce(into: []) { (result, this: (key: String, value: Int)) in
+    for _ in 0 ..< this.value {
+        result.append(this.key)
+    }
+}
+
+let allAnimals1 = farmAnimals.reduce(into: []) {
+    for _ in 0 ..< $1.value {
+        $0.append($1.key)
+    }
+}
+//The dropFirst function takes a single parameter that defaults to 1 and returns an array with the required number of elements removed from the front
+var prices = [2, 2, 3, 3, 4, 4]
+prices.dropFirst()
+prices.dropFirst(3)
+prices.dropLast()
+prices.dropLast(3)
+prices.prefix(2)
+prices.suffix(2)
+prices.removeAll() { $0 > 3}//remove 44
+prices.removeAll()
+
+//Lazy collections
+//Lazy collections are extremely useful when the collection is huge (even infinite) or expensive to generate. It saves the computation until precisely when it is needed.
+func isPrime(_ number: Int) -> Bool {
+    if number == 1 { return false}
+    if number == 2 || number == 3 { return true}
+    
+    for i in 2...Int(Double(number).squareRoot()) {
+        if number % i == 0 { return false }
+    }
+    return true
+}
+
+//var primes: [Int] = []
+//var i = 1
+//while primes.count < 10 {
+//    if isPrime(i) {
+//        primes.append(i)
+//    }
+//    i += 1
+//}
+/*
+Notice that you start with the completely open-ended collection 1... which means 1 until, well, infinity (or rather the maximum integer that the Int type can hold!). Then you use lazy to tell Swift that you want this to be a lazy collection. Then you use filter() and prefix() to filter out the primes and choose the first ten.
+At that point, the sequence has not been generated at all. No primes have been checked. It is only on the second statement, the primes.forEach that the sequence is evaluated and the first ten prime numbers are printed out. Neat! :]
+Lazy collections are extremely useful when the collection is huge (even infinite) or expensive to generate. It saves the computation until precisely when it is needed.
+*/
+let primes = (1...).lazy
+    .filter { isPrime($0) }
+    .prefix(10)
+    
+primes.forEach { print($0) }
+
+```
 
 11. Strings
 
