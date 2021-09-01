@@ -1548,7 +1548,7 @@ primes.forEach { print($0) }
        var firstName: String
        var lastName: String
      /*A non-convenience initializer is called a designated initializer and is subject to the rules of two-phase initialization. All initializers you've written in previous examples were in fact designated initializers.
-     https://juejin.cn/post/6894074565765365773
+     https://swifter.tips/init-keywords/
      */
        convenience init(transfer: Person) {
              self.init(firstName: transfer.firstName, lastName: transfer.lastName)
