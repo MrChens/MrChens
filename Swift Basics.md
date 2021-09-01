@@ -1318,22 +1318,17 @@ primes.forEach { print($0) }
 
 
 
-<img src="./img/swift_basic/memory_value1.png" width="25%" height="30%">
-
-<img src="./img/swift_basic/memory_value2.png" width="25%" height="30%">
+<img src="./img/swift_basic/memory_value1.png" width="25%" height="30%"><img src="./img/swift_basic/memory_value2.png" width="25%" height="30%">
 
 
-   
-       1. The heap vs. the stack
-       
-       When you create a reference type such as class, the system stores the actual instance in a region of memory known as the `heap`. Instances of a value type such as a struct resides in a region of memory called the `stack`, unless the value is part of a class instance, in which case the value is tored on the heap with the rest of the class instance.
 
+   1. The heap vs. the stack
 
-​       
-​       
+   When you create a reference type such as class, the system stores the actual instance in a region of memory known as the `heap`. Instances of a value type such as a struct resides in a region of memory called the `stack`, unless the value is part of a class instance, in which case the value is tored on the heap with the rest of the class instance.       
+
        - The system uses the stack to store anything on the immediate thread of execution; it's tightly managed and optimized by the CPU. A function allocates stack variables on entry and deallocates them on exit. Since the stack is so strictly organized, it's very efficient.
-       - The system uses the heap to store instances of reference types. The heap is generally a large pool of memory from which the system can request and dynamically allocate memory blocks. Lifetime is flexible and dynamic.
-       
+              - The system uses the heap to store instances of reference types. The heap is generally a large pool of memory from which the system can request and dynamically allocate memory blocks. Lifetime is flexible and dynamic.
+
        The heap doesn't automatically destroy its data like the stack does;
        
        additional work is required to do that. This makes creating and removing data on the heap a slower process, compared to on the stack.
@@ -1785,8 +1780,8 @@ primes.forEach { print($0) }
 
 ​       
 ​    
-    4. Protocols
-    
+​    4. Protocols
+​    
        Unlike the other named types, protocols don't define anything you instantiate directly. Instead, they define an interface or blueprint that actual concrete types conform to. With a protocol, you define a common set of properties and behaviors that concrete types go and implement.
     
        A protocol can be adopted by aclass, struct or enum and when another type adopts a protocol, it's required to implement the methods and properties defined in the protocol.
@@ -1987,8 +1982,8 @@ primes.forEach { print($0) }
 
 ​       
 ​    
-    5. Generics,范型
-    
+​    5. Generics,范型
+​    
        ```swift
        enum PetKind {
            case cat
