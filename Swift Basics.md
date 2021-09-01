@@ -1328,6 +1328,8 @@ primes.forEach { print($0) }
 
        <img align="left" src="./img/swift_basic/memory_value2.png" width="25%" height="30%">
 
+       ![](./img/swift_basic/memory_value2.png)
+
        
 
        ---
