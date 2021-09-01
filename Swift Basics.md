@@ -1194,6 +1194,8 @@ Swift Apprentice
 
     <img align="left" src="./img/swift_basic/method.png" width="25%" height="30%">
 
+    
+
     ```swift
     //Initializers
     struct SimpleDate {
@@ -1327,9 +1329,11 @@ Swift Apprentice
        var var4 = var3
        ```
 
-       <img align="left" src="/Users/zerlz/Desktop/Screen Shot 2021-08-03 at 4.23.12 PM.png" width="25%" height="30%">
+       <img align="left" src="./img/swift_basic/memory_value1.png" width="25%" height="30%">
 
-       <img align="left" src="/Users/zerlz/Desktop/Screen Shot 2021-08-03 at 4.23.26 PM.png" width="25%" height="30%">
+       <img align="left" src="./img/swift_basic/memory_value2.png" width="25%" height="30%">
+
+       
 
        1. The heap vs. the stack
 
