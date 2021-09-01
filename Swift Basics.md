@@ -1173,15 +1173,12 @@ primes.forEach { print($0) }
 
     self: access the value of an instance. most of the time you don't need to, you can just use a variable name.
 
-    ---
+
+
 
     <img align="left" src="./img/swift_basic/method.png" width="25%" height="30%">
 
-    ---
 
-    
-
-    
 
     ```swift
     //Initializers
