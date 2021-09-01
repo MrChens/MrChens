@@ -398,9 +398,8 @@ Swift Apprentice
    ```swift
    var errorCode: Int?
    errorCode = 100
-   errorCode = nil
    /*It doesn’t work because you’re trying to add an integer to a box — not to the value inside the box, but to the box itself. That doesn’t make sense.*/
-   errorCode + 1
+   print(errorCode! + 1)
    //Force unwrapping
    errorCode!
    //optional binding
