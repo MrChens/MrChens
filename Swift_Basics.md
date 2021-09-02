@@ -1180,7 +1180,7 @@ self: access the value of an instance. most of the time you don't need to, you c
 
 
 
-```
+```swift
 //Initializers
 struct SimpleDate {
   var month: String
