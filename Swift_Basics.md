@@ -475,9 +475,9 @@ Swift Apprentice
 
 ### Collection Types
 
-    If the collection doesn’t need to change after you’ve created it, you should make it immutable by declaring it as a constant with let. Alternatively, if you need to add, remove or update values in the collection, then you should create a mutable collection by declaring it as a variable with var.
+   If the collection doesn’t need to change after you’ve created it, you should make it immutable by declaring it as a constant with let. Alternatively, if you need to add, remove or update values in the collection, then you should create a mutable collection by declaring it as a variable with var.
 
-    Arrays, Dictionaries, Sets
+  Arrays, Dictionaries, Sets
 
 1. arrays,
 
