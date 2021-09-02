@@ -874,443 +874,444 @@ primes.forEach { print($0) }
 
 ### Strings
 
-    ```swift
-    let string = "matt"
-    for char in string {
-    print(char)
-    }
-    let cafeNormal = "café"
-    let cafeCombining = "cafe\u{0301}"
-    
-    cafeNormal.count     // 4
-    cafeCombining.count  // 4
-    cafeNormal.unicodeScalars.count     // 4
-    cafeCombining.unicodeScalars.count  // 5
-    for codePoint in cafeCombining.unicodeScalars {
-      print(codePoint.value)
-    }
-    let firstIndex = cafeCombining.startIndex
-    let firstChar = cafeCombining[firstIndex]
-    let lastIndex = cafeCombining.index(before: cafeCombining.endIndex)
-    let fourthIndex = cafeCombining.index(cafeCombining.startIndex, offsetBy:3)
-    let backwardsName = name.reversed()
-    //do this, you end up making a reversed copy of the original string with its own memory storage. Staying in the reversed collection domain will save memory space, which is fine if you don't need the whole reversed string.
-    print(String(backwardsName))
-    let secondCharIndex = backwardsName.index(backwardsName.startIndex, offsetBy: 1)
-    print(backwardsName[secondCharIndex])
-    
-    //Raw strings
-    let raw1 = #"Raw "No Escaping" \(no interpolation!). Use all the \ you want!"#
-    print(raw1)//Raw "No Escaping" \(no interpolation!). Use all the \ you want!
-    let raw2 = ##"Aren't we "# clever"##
-    print(raw2)//Aren't we "# clever
-    let raw3 = "can do that too"
-    let raw4 = #"Yes We \#(raw3)!"#
-    print(raw4)//Yes We can do that too!
-    
-    //Substrings
-    //A Substring shares the storage with its parent String that it was sliced from. This means that when you’re in the process of slicing a string, you use no extra memory. Then, when you want the substring as a String you explicitly create a new string and the memory is copied into a new buffer for this new string.
-    let fullName = "Matt Galloway"
-    let spaceIndex = fullName.firstIndex(of: " ")!
-    let firstName = fullName[fullName.startIndex..<spaceIndex]//Matt
-    let firstName1 = fullName[..<spaceIndex]//Matt
-    let lastName = fullName[fullName.index(after: spaceIndex)...]//Galloway
-    let lastNameString = String(lastName)
-    
-    //Character properties
-    let singleCharacter: Character = "x"
-    let emoji: Character = "🈷️"
-    let hexDigit: Character = "d"
-    let thaiNine: Character = "๙"
-    singleCharacter.isASCII
-    emoji.isASCII
-    singleCharacter.isWhitespace
-    hexDigit.isHexDigit//true
-    thaiNine.wholeNumberValue
-    
-    //Encoding
-    //Strings are made up of a collection of Unicode code points. These code points range from the number 0 up to 1114111
-    //UTF-8
-    //This uses 8-bit code units instead.
-    
-    ```
+```swift
+let string = "matt"
+for char in string {
+print(char)
+}
+let cafeNormal = "café"
+let cafeCombining = "cafe\u{0301}"
+
+cafeNormal.count     // 4
+cafeCombining.count  // 4
+cafeNormal.unicodeScalars.count     // 4
+cafeCombining.unicodeScalars.count  // 5
+for codePoint in cafeCombining.unicodeScalars {
+  print(codePoint.value)
+}
+let firstIndex = cafeCombining.startIndex
+let firstChar = cafeCombining[firstIndex]
+let lastIndex = cafeCombining.index(before: cafeCombining.endIndex)
+let fourthIndex = cafeCombining.index(cafeCombining.startIndex, offsetBy:3)
+let backwardsName = name.reversed()
+//do this, you end up making a reversed copy of the original string with its own memory storage. Staying in the reversed collection domain will save memory space, which is fine if you don't need the whole reversed string.
+print(String(backwardsName))
+let secondCharIndex = backwardsName.index(backwardsName.startIndex, offsetBy: 1)
+print(backwardsName[secondCharIndex])
+
+//Raw strings
+let raw1 = #"Raw "No Escaping" \(no interpolation!). Use all the \ you want!"#
+print(raw1)//Raw "No Escaping" \(no interpolation!). Use all the \ you want!
+let raw2 = ##"Aren't we "# clever"##
+print(raw2)//Aren't we "# clever
+let raw3 = "can do that too"
+let raw4 = #"Yes We \#(raw3)!"#
+print(raw4)//Yes We can do that too!
+
+//Substrings
+//A Substring shares the storage with its parent String that it was sliced from. This means that when you’re in the process of slicing a string, you use no extra memory. Then, when you want the substring as a String you explicitly create a new string and the memory is copied into a new buffer for this new string.
+let fullName = "Matt Galloway"
+let spaceIndex = fullName.firstIndex(of: " ")!
+let firstName = fullName[fullName.startIndex..<spaceIndex]//Matt
+let firstName1 = fullName[..<spaceIndex]//Matt
+let lastName = fullName[fullName.index(after: spaceIndex)...]//Galloway
+let lastNameString = String(lastName)
+
+//Character properties
+let singleCharacter: Character = "x"
+let emoji: Character = "🈷️"
+let hexDigit: Character = "d"
+let thaiNine: Character = "๙"
+singleCharacter.isASCII
+emoji.isASCII
+singleCharacter.isWhitespace
+hexDigit.isHexDigit//true
+thaiNine.wholeNumberValue
+
+//Encoding
+//Strings are made up of a collection of Unicode code points. These code points range from the number 0 up to 1114111
+//UTF-8
+//This uses 8-bit code units instead.
+```
 
 ### Building Your Own Types
 
-    You can create your own type by combining variables and functions into a new type definition.
+You can create your own type by combining variables and functions into a new type definition.
 
-    Swift includes four kinds of named types: structures, classes, enumerations and protocols.
+Swift includes four kinds of named types: structures, classes, enumerations and protocols.
 
-    - Structures
+- Structures
 
-    - Properties
+- Properties
 
-    - Methods
+- Methods
 
-    - Classes
+- Classes
 
-    - Advanced Classes
+- Advanced Classes
 
-    - Enumerations
+- Enumerations
 
-    - Protocols
+- Protocols
 
-    - Generics 
+- Generics 
 
-    
 
-    1. Structures
+​    
 
-       Structures are types that can store named properties and define actions and behaviors.
+1. Structures
 
-       ```swift
-       //Swift automatically provides initializers for structures with all the properties in the parameter list.
-       //Defining a property as constant or variable determines if you can change it.
-       //In addition to choosing whether your properties should be variable or constants, you must also declare the structure itself as a variable if you want to be able to modify it auter it7s initialized.
-       struct Location {
-           let x: Int
-           let y: Int
+   Structures are types that can store named properties and define actions and behaviors.
+
+   ```swift
+   //Swift automatically provides initializers for structures with all the properties in the parameter list.
+   //Defining a property as constant or variable determines if you can change it.
+   //In addition to choosing whether your properties should be variable or constants, you must also declare the structure itself as a variable if you want to be able to modify it auter it7s initialized.
+   struct Location {
+       let x: Int
+       let y: Int
+   }
+   
+   struct DeliveryArea {
+       let center: Location
+       var radius: Double
+   }
+   let storeLocation = Location(x: 3, y: 4)
+   var storeArea = DeliveryArea(center: storeLocation, radius: 2)
+   //Accessing members
+   print(storeArea.radius)
+   storeArea.radius = 250
+   func distance(from source:(x: Int, y: Int), to target: (x: Int, y: Int)) -> Double {
+       let distanceX = Double(source.x - target.x)
+       let distanceY = Double(source.y - target.y)
+       return (distanceX * distanceX + distanceY * distanceY).squareRoot()
+   }
+   //Much like a structure can have constants and variables, it can also define its own functions
+   struct DeliveryArea {
+       let center: Location
+       var radius: Double
+       func contains(_ location: Location) -> Bool {
+           let distanceFromCenter = distance(from: (center.x, center.y), to: (location.x, location.y))
+           return distanceFromCenter < radius
        }
-       
-       struct DeliveryArea {
-           let center: Location
-           var radius: Double
-       }
-       let storeLocation = Location(x: 3, y: 4)
-       var storeArea = DeliveryArea(center: storeLocation, radius: 2)
-       //Accessing members
-       print(storeArea.radius)
-       storeArea.radius = 250
-       func distance(from source:(x: Int, y: Int), to target: (x: Int, y: Int)) -> Double {
-           let distanceX = Double(source.x - target.x)
-           let distanceY = Double(source.y - target.y)
-           return (distanceX * distanceX + distanceY * distanceY).squareRoot()
-       }
-       //Much like a structure can have constants and variables, it can also define its own functions
-       struct DeliveryArea {
-           let center: Location
-           var radius: Double
-           func contains(_ location: Location) -> Bool {
-               let distanceFromCenter = distance(from: (center.x, center.y), to: (location.x, location.y))
-               return distanceFromCenter < radius
-           }
-       }
-       
-       //Structures as values
-       /*
-       The term value has an important meaning when it comes to structures in Swift, and that's because structures create what are known as value types.
-       A value type is a type whose instances are copied on assignment.
-       var a= 5 
-       var b = a
-       This copy-on-assignment behavior means that when a is assigned to b, the value of a is copied into b.
-       */
-       
-       //Conforming to a protocol
-       //Protocols contain a set of requirements that conforming types must satisfy.
-       ```
+   }
+   
+   //Structures as values
+   /*
+   The term value has an important meaning when it comes to structures in Swift, and that's because structures create what are known as value types.
+   A value type is a type whose instances are copied on assignment.
+   var a= 5 
+   var b = a
+   This copy-on-assignment behavior means that when a is assigned to b, the value of a is copied into b.
+   */
+   
+   //Conforming to a protocol
+   //Protocols contain a set of requirements that conforming types must satisfy.
+   ```
 
-       
 
-    2. Properties
+​       
 
-       The values inside a stucture are called properties.
+2. Properties
 
-       ```swift
-       struct Car {
-           let make: String
-           let color: String
+   The values inside a stucture are called properties.
+
+   ```swift
+   struct Car {
+       let make: String
+       let color: String
+   }
+   //The two properties of Car are stored properties, which means they store actual string values for each instance of Car.
+   //Some properties calculate values rather than tore them. there's no actual memory allocated for them; rather, they get calculated on-the-fly each time you access them. called computed properties.
+   
+   //Stored properties
+   struct Contact {
+       var fullName: String
+       let emailAddress: String
+       var relationship = "Friend"// Default value
+   }
+   
+   var person = Contact(fullName: "Grace Murray", emailAddress: "grace@navy.mil")
+   var boss = Contact(fullName: "Ray", emailAddress: "ray@ray.com", relationship: "boss")
+   
+   // Computed properties
+   // While a stored property can be a constant or a variable, a computed property must be defined as a variable.
+   //Computed properties must also include a type, because the compiler needs to know what to expect as a return value.
+   struct TV {
+       var height: Double
+       var width: Double
+       //read-only computed property
+       var diagonal: Int {
+           let result = (height * height + width * width).squareRoot().rounded()
+           return Int(result)
        }
-       //The two properties of Car are stored properties, which means they store actual string values for each instance of Car.
-       //Some properties calculate values rather than tore them. there's no actual memory allocated for them; rather, they get calculated on-the-fly each time you access them. called computed properties.
-       
-       //Stored properties
-       struct Contact {
-           var fullName: String
-           let emailAddress: String
-           var relationship = "Friend"// Default value
-       }
-       
-       var person = Contact(fullName: "Grace Murray", emailAddress: "grace@navy.mil")
-       var boss = Contact(fullName: "Ray", emailAddress: "ray@ray.com", relationship: "boss")
-       
-       // Computed properties
-       // While a stored property can be a constant or a variable, a computed property must be defined as a variable.
-       //Computed properties must also include a type, because the compiler needs to know what to expect as a return value.
-       struct TV {
-           var height: Double
-           var width: Double
-           //read-only computed property
-           var diagonal: Int {
+     
+   }
+   var tv = TV(height: 2, width: 4)
+   tv.diagonal
+   //getter and setter
+   struct TV {
+       var height: Double
+       var width: Double
+       //read-write computed proerty
+       var diagonal: Int {
+           get {
                let result = (height * height + width * width).squareRoot().rounded()
                return Int(result)
            }
-         
-       }
-       var tv = TV(height: 2, width: 4)
-       tv.diagonal
-       //getter and setter
-       struct TV {
-           var height: Double
-           var width: Double
-           //read-write computed proerty
-           var diagonal: Int {
-               get {
-                   let result = (height * height + width * width).squareRoot().rounded()
-                   return Int(result)
-               }
+           
+           set {
+               let ratioWidth = 16.0
+               let ratioHeight = 9.0
                
-               set {
-                   let ratioWidth = 16.0
-                   let ratioHeight = 9.0
-                   
-                   let ratioDiagonal = (ratioWidth * ratioWidth + ratioHeight * ratioHeight).squareRoot()
-                   height = Double(newValue) * ratioHeight / ratioDiagonal
-                   width = height * ratioWidth / ratioHeight
+               let ratioDiagonal = (ratioWidth * ratioWidth + ratioHeight * ratioHeight).squareRoot()
+               height = Double(newValue) * ratioHeight / ratioDiagonal
+               width = height * ratioWidth / ratioHeight
+           }
+       }
+   }
+   tv.diagonal = 70
+   
+   //Type properties
+   struct Level {
+       static var highestLevel = 1
+       let id: Int
+       var boss: String
+       var unlocked: Bool
+   }
+   
+   let level1 = Level(id: 1, boss: "C", unlocked: true)
+   let level2 = Level(id: 2, boss: "S", unlocked: false)
+   let level3 = Level(id: 3, boss: "CH", unlocked: false)
+   let level4 = Level(id: 4, boss: "Y", unlocked: false)
+   let highestLevel = Level.highestLevel
+   //level3.highestLevel
+   
+   //Property observers
+   //willSet and didSet observers are only available for stored properties.
+   // willSet and didSet observers are not called when a property is set during initialization. That means property observers are only useful for variable properties since constant properties are only set during initialization. Select between var and let according to match your needs.
+   struct Level {
+       static var highestLevel = 1
+       let id: Int
+       var boss: String
+       
+       var unlocked: Bool {
+           didSet {
+               if unlocked && id > Self.highestLevel {
+                   Self.highestLevel = id
+               }
+           }
+   //        willSet {
+   //
+   //        }
+       }
+   }
+   
+   var level3 = Level(id: 3, boss: "CH", unlocked: false)
+   level3.unlocked = true
+   
+   //Limiting a variable
+   struct LightBulb: CustomStringConvertible {
+       static let maxCurrent = 40
+       var description: String {
+           "\(current)"
+       }
+       var current = 0 {
+           didSet {
+               if current > LightBulb.maxCurrent{
+                   print("""
+                       current is too high,
+                       falling back to previous setting.
+                       """)
+                   current = oldValue
                }
            }
        }
-       tv.diagonal = 70
-       
-       //Type properties
-       struct Level {
-           static var highestLevel = 1
-           let id: Int
-           var boss: String
-           var unlocked: Bool
-       }
-       
-       let level1 = Level(id: 1, boss: "C", unlocked: true)
-       let level2 = Level(id: 2, boss: "S", unlocked: false)
-       let level3 = Level(id: 3, boss: "CH", unlocked: false)
-       let level4 = Level(id: 4, boss: "Y", unlocked: false)
-       let highestLevel = Level.highestLevel
-       //level3.highestLevel
-       
-       //Property observers
-       //willSet and didSet observers are only available for stored properties.
-       // willSet and didSet observers are not called when a property is set during initialization. That means property observers are only useful for variable properties since constant properties are only set during initialization. Select between var and let according to match your needs.
-       struct Level {
-           static var highestLevel = 1
-           let id: Int
-           var boss: String
-           
-           var unlocked: Bool {
-               didSet {
-                   if unlocked && id > Self.highestLevel {
-                       Self.highestLevel = id
-                   }
-               }
-       //        willSet {
-       //
-       //        }
+   }
+   
+   var light = LightBulb()
+   light.current = 50
+   print(light)
+   light.current = 3
+   print(light)
+     
+   //Lazy properties
+     struct Circle {
+       //pi, as a lazy stored property, is only calculated the first time.
+       //the lazy property must be a variable
+       lazy var pi = {
+           ((4.0 * atan(1.0 / 5.0)) - atan(1.0 / 239.0)) * 4.0
+       }()
+       var radius = 0.0
+       var circuference: Double {
+         //since the value of pi changes, the circumference getter must be marked as mutating. Accessing the value of pi changes the value of the structure.
+         //since pi is a stored property of the structure, you need a custom initializer to use only the radius. Remember the automatic initializer of a structure includes all of the stored properties.
+           mutating get {
+               pi * radius * 2
            }
        }
        
-       var level3 = Level(id: 3, boss: "CH", unlocked: false)
-       level3.unlocked = true
-       
-       //Limiting a variable
-       struct LightBulb: CustomStringConvertible {
-           static let maxCurrent = 40
-           var description: String {
-               "\(current)"
-           }
-           var current = 0 {
-               didSet {
-                   if current > LightBulb.maxCurrent{
-                       print("""
-                           current is too high,
-                           falling back to previous setting.
-                           """)
-                       current = oldValue
-                   }
-               }
-           }
+       init(radius: Double) {
+           self.radius = radius
+       }
+   }
+   
+   var circle = Circle(radius: 5)
+   print(circle)//Circle($__lazy_storage_$_pi: nil, radius: 5.0)
+   circle.circuference//31.4
+   circle.pi = 4
+   circle.circuference//40
+   print(circle.pi)//4
+   
+   ```
+
+
+​       
+
+3. Methods 
+
+Self: Access static properties from inside a struct.
+
+self: access the value of an instance. most of the time you don't need to, you can just use a variable name.
+
+
+
+<img align="center" src="./img/swift_basic/method.png" width="25%" height="30%">
+
+
+
+```
+//Initializers
+struct SimpleDate {
+  var month: String
+  init() {
+    month = "January"
+  }
+}
+
+SimpleDate()
+struct SimpleDate {
+  var month: String = "January"
+  var day: Int = 1
+}
+SimpleDate()
+SimpleDate(month: "February", day: 14)
+
+//mutating methods
+/*
+Methods in structures cannot change the values of the values of the instance without being marked as mutating.
+The mutating keyword marks a method that changes a structure's value. Since a structure is a value type, the system copies it each time it's passed around an app. If a method changes the value of one of the properties, then the original instance and the copied instance will no longer be equivalent.
+
+By marking a method as mutating, you're also telling the Swift compiler this method must not be called on constants. This is how Swift knows which methods to allow and which to reject at compile time.
+
+For mutating methods, Swift secretly passes in self just like it did for normal methods. But for mutating methods, the secret self gets marked as an inout parameter. 
+*/
+let months: Array = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+struct SimpleDate {
+    var month: String = "January"
+    var day: Int = 1
+    
+    func monthsUntilWinterBreak() -> Int {
+        months.firstIndex(of: "December")! - months.firstIndex(of: month)!
+    }
+    mutating func advance() {
+        day += 1
+    }
+//    func advanceWithoutMutating() {
+//        day += 1
+//    }
+}
+var d = SimpleDate()
+print(d.day)
+d.advance()
+print(d.day)
+//Type methods
+/*Like type properties, you can use type methods to access data across all instances. You call type methods on the type itself, instead of on an instance.
+*/
+struct Math {
+    static func factorial(of number: Int) -> Int {
+        (1...number).reduce(1, *)
+    }
+}
+Math.factorial(of: 6)//720
+
+//Adding to an existing structure with extensions
+extension Math {
+    static func primeFactors(of value: Int) -> [Int] {
+        var remainingValue = value
+        var testFactor = 2
+        var primes: [Int] = []
+        while testFactor * testFactor <= remainingValue {
+            if remainingValue % testFactor == 0 {
+                primes.append(testFactor)
+                remainingValue /= testFactor
+            }
+            else {
+                testFactor += 1
+            }
+        }
+        if remainingValue > 1 {
+            primes.append(remainingValue)
+        }
+        return primes
+    }
+}
+//Keeping the compiler-generated initializer using extensions
+extension SimpleDate {
+    init(month: Int, day: Int) {
+        self.month = months[month - 1]
+        self.day = day
+    }
+}
+```
+
+
+
+
+1. Classes
+
+   They are named types with properties and methods.
+
+   ```swift
+   //Creating classes
+   class Person {
+       var firstName: String
+       var lastName: String
+       //if you forget to provide an initializer, the Swift compiler will flag that as an error
+       //Class initializers are functions marked init, and all stored properties must be assigned initial values before the end of init.
+       init(firstName: String, lastName: String) {
+           self.firstName = firstName
+           self.lastName = lastName
        }
        
-       var light = LightBulb()
-       light.current = 50
-       print(light)
-       light.current = 3
-       print(light)
-         
-       //Lazy properties
-         struct Circle {
-           //pi, as a lazy stored property, is only calculated the first time.
-           //the lazy property must be a variable
-           lazy var pi = {
-               ((4.0 * atan(1.0 / 5.0)) - atan(1.0 / 239.0)) * 4.0
-           }()
-           var radius = 0.0
-           var circuference: Double {
-             //since the value of pi changes, the circumference getter must be marked as mutating. Accessing the value of pi changes the value of the structure.
-             //since pi is a stored property of the structure, you need a custom initializer to use only the radius. Remember the automatic initializer of a structure includes all of the stored properties.
-               mutating get {
-                   pi * radius * 2
-               }
-           }
-           
-           init(radius: Double) {
-               self.radius = radius
-           }
+       var fullName: String {
+           "\(firstName) \(lastName)"
        }
-       
-       var circle = Circle(radius: 5)
-       print(circle)//Circle($__lazy_storage_$_pi: nil, radius: 5.0)
-       circle.circuference//31.4
-       circle.pi = 4
-       circle.circuference//40
-       print(circle.pi)//4
-       
-       ```
-
-       
-
-    3. Methods 
-
-    Self: Access static properties from inside a struct.
-
-    self: access the value of an instance. most of the time you don't need to, you can just use a variable name.
-
-
-
-
-    <img align="center" src="./img/swift_basic/method.png" width="25%" height="30%">
-
-
-
-    ```swift
-    //Initializers
-    struct SimpleDate {
-      var month: String
-      init() {
-        month = "January"
+   }
+   
+   let john = Person(firstName: "Johnny", lastName: "Appleseed")
+   //Reference types
+   /*In Swift, an instance of a structure is an immutable value, whereas an instance of a class is a mutable object.
+   Classes are reference types, so a variable of a class type doesn't store an actual instance. it stores a reference to alocation in memory that stores the instance.
+   Structure as a value type stores the actual value, providing direct access to it.
+   */
+   //reference types and value types
+   class SimplePerson {
+       let name: String
+       init(name: String) {
+           self.name = name
+       }
+   }
+   
+   var var1 = SimplePerson(name: "John")
+   var var2 = var1
+    struct SimplePerson1 {
+          let name: String
       }
-    }
-    
-    SimpleDate()
-    struct SimpleDate {
-      var month: String = "January"
-      var day: Int = 1
-    }
-    SimpleDate()
-    SimpleDate(month: "February", day: 14)
-    
-    //mutating methods
-    /*
-    Methods in structures cannot change the values of the values of the instance without being marked as mutating.
-    The mutating keyword marks a method that changes a structure's value. Since a structure is a value type, the system copies it each time it's passed around an app. If a method changes the value of one of the properties, then the original instance and the copied instance will no longer be equivalent.
-    
-    By marking a method as mutating, you're also telling the Swift compiler this method must not be called on constants. This is how Swift knows which methods to allow and which to reject at compile time.
-    
-    For mutating methods, Swift secretly passes in self just like it did for normal methods. But for mutating methods, the secret self gets marked as an inout parameter. 
-    */
-    let months: Array = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    
-    struct SimpleDate {
-        var month: String = "January"
-        var day: Int = 1
-        
-        func monthsUntilWinterBreak() -> Int {
-            months.firstIndex(of: "December")! - months.firstIndex(of: month)!
-        }
-        mutating func advance() {
-            day += 1
-        }
-    //    func advanceWithoutMutating() {
-    //        day += 1
-    //    }
-    }
-    var d = SimpleDate()
-    print(d.day)
-    d.advance()
-    print(d.day)
-    //Type methods
-    /*Like type properties, you can use type methods to access data across all instances. You call type methods on the type itself, instead of on an instance.
-    */
-    struct Math {
-        static func factorial(of number: Int) -> Int {
-            (1...number).reduce(1, *)
-        }
-    }
-    Math.factorial(of: 6)//720
-    
-    //Adding to an existing structure with extensions
-    extension Math {
-        static func primeFactors(of value: Int) -> [Int] {
-            var remainingValue = value
-            var testFactor = 2
-            var primes: [Int] = []
-            while testFactor * testFactor <= remainingValue {
-                if remainingValue % testFactor == 0 {
-                    primes.append(testFactor)
-                    remainingValue /= testFactor
-                }
-                else {
-                    testFactor += 1
-                }
-            }
-            if remainingValue > 1 {
-                primes.append(remainingValue)
-            }
-            return primes
-        }
-    }
-    //Keeping the compiler-generated initializer using extensions
-    extension SimpleDate {
-        init(month: Int, day: Int) {
-            self.month = months[month - 1]
-            self.day = day
-        }
-    }
-    ```
-
-    1. Classes
-
-       They are named types with properties and methods.
-
-       ```swift
-       //Creating classes
-       class Person {
-           var firstName: String
-           var lastName: String
-           //if you forget to provide an initializer, the Swift compiler will flag that as an error
-           //Class initializers are functions marked init, and all stored properties must be assigned initial values before the end of init.
-           init(firstName: String, lastName: String) {
-               self.firstName = firstName
-               self.lastName = lastName
-           }
-           
-           var fullName: String {
-               "\(firstName) \(lastName)"
-           }
-       }
-       
-       let john = Person(firstName: "Johnny", lastName: "Appleseed")
-       //Reference types
-       /*In Swift, an instance of a structure is an immutable value, whereas an instance of a class is a mutable object.
-       Classes are reference types, so a variable of a class type doesn't store an actual instance. it stores a reference to alocation in memory that stores the instance.
-       Structure as a value type stores the actual value, providing direct access to it.
-       */
-       //reference types and value types
-       class SimplePerson {
-           let name: String
-           init(name: String) {
-               self.name = name
-           }
-       }
-       
-       var var1 = SimplePerson(name: "John")
-       var var2 = var1;
-       
-       
-       struct SimplePerson1 {
-           let name: String
-       }
-       
-       var var3 = SimplePerson1(name: "John")
-       var var4 = var3
-       ```
+      
+      var var3 = SimplePerson1(name: "John")
+      var var4 = var3
 
 
 
@@ -2112,160 +2113,164 @@ primes.forEach { print($0) }
 
 ### Advanced Topics
 
-    1. Access Control, Code Organization & Testing
+1. Access Control, Code Organization & Testing
 
-       ```swift
-       protocol Account {
-           associatedtype Currency
-           
-           var balance: Currency { get }
-           func deposit(amount: Currency)
-           func withdraw(amount: Currency)
+   ```swift
+   protocol Account {
+       associatedtype Currency
+       
+       var balance: Currency { get }
+       func deposit(amount: Currency)
+       func withdraw(amount: Currency)
+   }
+   
+   typealias Dollars = Double
+   
+   class BasicAccount: Account {
+        private(set) var balance: Dollars = 0.0
+       
+       func deposit(amount: Dollars) {
+           balance += amount
        }
-       
-       typealias Dollars = Double
-       
-       class BasicAccount: Account {
-            private(set) var balance: Dollars = 0.0
-           
-           func deposit(amount: Dollars) {
-               balance += amount
-           }
-           func withdraw(amount: Dollars) {
-               if amount <= balance {
-                   balance -= amount
-               } else {
-                   balance = 0
-               }
-           }
-       }
-       
-       let account = BasicAccount()
-       
-       account.deposit(amount: 10.00)
-       account.withdraw(amount: 5.00)
-       
-       account.balance = 100000000.00
-       /*
-       1. private: Accessible only to the defining type, all nested types and extensions on that type within the same source file.
-       2. fileprivate: Accessible from anywhere within the source file in which it's defined.
-       3. internal: Accessible from anywhere within the module in which it's defined. This level is the default access level. If you don't write anything, this is what you get.
-       4. public: Accessible from anywhere that imports the module.
-       5. open: The same as public, with the additional ability granted to override the code in another module.
-       */
-       protocol Account {
-           associatedtype Currency
-           
-           var balance: Currency { get }
-           func deposit(amount: Currency)
-           func withdraw(amount: Currency)
-       }
-       
-       typealias Dollars = Double
-       
-       class BasicAccount: Account {
-           
-           private(set) var balance: Dollars = 0.0
-           
-           func deposit(amount: Dollars) {
-               balance += amount
-           }
-           func withdraw(amount: Dollars) {
-               if amount <= balance {
-                   balance -= amount
-               } else {
-                   balance = 0
-               }
+       func withdraw(amount: Dollars) {
+           if amount <= balance {
+               balance -= amount
+           } else {
+               balance = 0
            }
        }
+   }
+   
+   let account = BasicAccount()
+   
+   account.deposit(amount: 10.00)
+   account.withdraw(amount: 5.00)
+   
+   account.balance = 100000000.00
+   /*
+   1. private: Accessible only to the defining type, all nested types and extensions on that type within the same source file.
+   2. fileprivate: Accessible from anywhere within the source file in which it's defined.
+   3. internal: Accessible from anywhere within the module in which it's defined. This level is the default access level. If you don't write anything, this is what you get.
+   4. public: Accessible from anywhere that imports the module.
+   5. open: The same as public, with the additional ability granted to override the code in another module.
+   */
+   protocol Account {
+       associatedtype Currency
        
-       class CheckingAccount: BasicAccount {
-           private let accountNumber = UUID().uuidString
+       var balance: Currency { get }
+       func deposit(amount: Currency)
+       func withdraw(amount: Currency)
+   }
+   
+   typealias Dollars = Double
+   
+   class BasicAccount: Account {
+       
+       private(set) var balance: Dollars = 0.0
+       
+       func deposit(amount: Dollars) {
+           balance += amount
+       }
+       func withdraw(amount: Dollars) {
+           if amount <= balance {
+               balance -= amount
+           } else {
+               balance = 0
+           }
+       }
+   }
+   
+   class CheckingAccount: BasicAccount {
+       private let accountNumber = UUID().uuidString
+       
+       class Check {
+           let account: String
+           var amount: Dollars
+           private(set) var cashed = false
            
-           class Check {
-               let account: String
-               var amount: Dollars
-               private(set) var cashed = false
-               
-               func cash() -> Void {
-                   cashed = true
-               }
-               
-               init(amount: Dollars, from account: CheckingAccount) {
-                   self.amount = amount
-                   self.account = account.accountNumber
-               }
+           func cash() -> Void {
+               cashed = true
            }
            
-           func writeCheck(amount: Dollars) -> Check? {
-               guard balance > amount else {
-                   return nil
-               }
-               
-               let check = Check(amount: amount, from: self)
-               withdraw(amount: check.amount)
-               return check
-           }
-           
-           func deposit(_ check: Check) -> Void {
-               guard !check.cashed else {
-                   return
-               }
-               
-               deposit(amount: check.amount)
-               check.cash()
-       //        check.cashed = true
+           init(amount: Dollars, from account: CheckingAccount) {
+               self.amount = amount
+               self.account = account.accountNumber
            }
        }
        
-       let johnChecking = CheckingAccount()
-       johnChecking.deposit(amount: 300.00)
+       func writeCheck(amount: Dollars) -> Check? {
+           guard balance > amount else {
+               return nil
+           }
+           
+           let check = Check(amount: amount, from: self)
+           withdraw(amount: check.amount)
+           return check
+       }
        
-       
-       let check = johnChecking.writeCheck(amount: 200.0)!
-       
-       let janeChecking = CheckingAccount()
-       janeChecking.deposit(check)
-       janeChecking.balance//200.00
-       
-       janeChecking.deposit(check)
-       janeChecking.balance//200.00
-       ```
+       func deposit(_ check: Check) -> Void {
+           guard !check.cashed else {
+               return
+           }
+           
+           deposit(amount: check.amount)
+           check.cash()
+   //        check.cashed = true
+       }
+   }
+   
+   let johnChecking = CheckingAccount()
+   johnChecking.deposit(amount: 300.00)
+     let check = johnChecking.writeCheck(amount: 200.0)!
+      
+      let janeChecking = CheckingAccount()
+      janeChecking.deposit(check)
+      janeChecking.balance//200.00
+      
+      janeChecking.deposit(check)
+      janeChecking.balance//200.00
 
-       
 
-    2. Custom Operators, Subscripts & Keypaths
+​              
+2. Custom Operators, Subscripts & Keypaths
 
-       
 
-    3. Pattern Matching
+​       
 
-       
+3. Pattern Matching
 
-    4. Error Handling
 
-       
+​       
 
-    5. Encoding & Decoding Types
+4. Error Handling
 
-       
 
-    6. Memory Management
+​       
 
-       
+5. Encoding & Decoding Types
 
-    7. Value types & Reference Types
 
-       
+​       
 
-    8. Protocol-Oriented Programming
+6. Memory Management
 
-       
 
-    9. Advanced Protocols & Generics
+​       
 
-    
+7. Value types & Reference Types
+
+
+​       
+
+8. Protocol-Oriented Programming
+
+
+​       
+
+9. Advanced Protocols & Generics
+
+
+​    
 
 12. Conclusion
-
 
