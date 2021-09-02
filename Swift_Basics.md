@@ -935,7 +935,7 @@ primes.forEach { print($0) }
     
     ```
 
-12. Building Your Own Types
+## Building Your Own Types
 
     You can create your own type by combining variables and functions into a new type definition.
 
