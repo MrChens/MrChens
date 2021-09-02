@@ -242,7 +242,7 @@ Swift Apprentice
       }
       ```
 
-8. Functions
+### Functions
 
    1. Function basics
 
@@ -387,7 +387,7 @@ Swift Apprentice
       }
       ```
 
-9. Options
+### Options
 
    `Optional`, that handles the possibility a value could be nil.
 
@@ -473,7 +473,7 @@ Swift Apprentice
 
    
 
-10. Collection Types
+### Collection Types
 
     If the collection doesn’t need to change after you’ve created it, you should make it immutable by declaring it as a constant with let. Alternatively, if you need to add, remove or update values in the collection, then you should create a mutable collection by declaring it as a variable with var.
 
@@ -620,7 +620,7 @@ Swift Apprentice
 
 ​    
 
-Collection Iteration with Closures
+#### Collection Iteration with Closures
 
 A closure is simply a function with no name; you can assign it to a variable and pass it around like any other value.
 
@@ -872,7 +872,7 @@ primes.forEach { print($0) }
 
 ```
 
-11. Strings
+### Strings
 
     ```swift
     let string = "matt"
@@ -935,7 +935,7 @@ primes.forEach { print($0) }
     
     ```
 
-## Building Your Own Types
+### Building Your Own Types
 
     You can create your own type by combining variables and functions into a new type definition.
 
@@ -1318,7 +1318,7 @@ primes.forEach { print($0) }
 
 
 
-   1. The heap vs. the stack
+## The heap vs. the stack
 
    When you create a reference type such as class, the system stores the actual instance in a region of memory known as the `heap`. Instances of a value type such as a struct resides in a region of memory called the `stack`, unless the value is part of a class instance, in which case the value is tored on the heap with the rest of the class instance.       
 
@@ -2110,7 +2110,7 @@ primes.forEach { print($0) }
    swapped(33, "Jay")// return ("Jay", 33)
 ```
 
-11. Advanced Topics
+### Advanced Topics
 
     1. Access Control, Code Organization & Testing
 
@@ -2268,15 +2268,4 @@ primes.forEach { print($0) }
 
 12. Conclusion
 
-
-
-
-
-### Collection Types
-
-### Building Your Own Types
-
-
-
-### Advanced Topics
 
