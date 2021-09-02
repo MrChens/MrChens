@@ -1364,7 +1364,8 @@ extension SimpleDate {
            grades.append(grade)
        }
    }
-   //If you were to attempt to assign another student to jane, you would get a compiler error://jane = Student(firstName: "John", lastName: "Appleseed")
+   //If you were to attempt to assign another student to jane, you would get a compiler error:
+   //jane = Student(firstName: "John", lastName: "Appleseed")
    let jane = Student(firstName: "Jane", lastName: "Appleseed")
    let history = Grade(letter: "B", points: 9.0, credits: 3.0)
    var math = Grade(letter: "Q", points: 16.0, credits: 4.0)
