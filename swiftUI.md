@@ -1,1 +1,5 @@
 1. [apple swiftui](https://developer.apple.com/tutorials/swiftui)
+2. [standford CS193p 2021](https://www.bilibili.com/video/BV1fy4y1u7hX/?spm_id_from=autoNext)
+    - [resource](https://cs193p.sites.stanford.edu)
+4. [Demystify SwiftUI](https://developer.apple.com/videos/play/wwdc2021/10022/)
+5. [Data Flow Through SwiftUI](https://developer.apple.com/videos/play/wwdc2019/226/)
