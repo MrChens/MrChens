@@ -47,3 +47,5 @@ SwiftUI has two guiding principles for managing how data flows through your app:
 - A `@State` property is a source of truth. One view owns it and passes its value or reference, known as a binding, to its subviews.当你把它当作参数传递（双向绑定），则需要`$xxxx`；作变量使用则`xxxx`
 - A `@Binding` property is a reference to a `@State` property owned by another view. It gets its initial value when the other view passes it a binding, using the $ prefix. Having this reference to the source of truth enables the subview to change the property's value, and this changes the state of any view that depends on this property.
 - `@EnvironmentObject` declares dependency on some shared data - data that's visible to all views in a subtree of the app. It's a convenient way to pass data indirectly instead of passing data from parent view to child to grandchild, especially if the in-between child view donesn't need it.
+    - To be an EnvironmentObject, `xxx` must conform to the `ObservableObject` protocol. An `ObservableObject` is a publisher, like Timer.publisher.
+    - To conform to `ObservableObject`, `xxx` must be a class, not a structure.
