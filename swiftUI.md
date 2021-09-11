@@ -3,6 +3,7 @@
     - [resource](https://cs193p.sites.stanford.edu)
 4. [Demystify SwiftUI](https://developer.apple.com/videos/play/wwdc2021/10022/)
 5. [Data Flow Through SwiftUI](https://developer.apple.com/videos/play/wwdc2019/226/)
+6. [sf-symbols](https://developer.apple.com/sf-symbols/)
 
 
 
