@@ -34,3 +34,10 @@ Using State Effectively
 - Use derived Binding or value
 - Prefer BindableObject for persistence
 - Example: Button highlighting
+
+
+## Managing your app's data
+
+SwiftUI has two guiding principles for managing how data flows through your app:
+- `Data access = dependency:`Reading a piece of data in your view creates a dependency for that data in that view. Every view is a function of its data dependencies - its inputs or state.
+- `Single source of truth:` Every piece of data that a view reads has a source of truth, which is either onwned by the view or external to the view. Regardless of where the source of truth lies, you should always have a single source of truth.
