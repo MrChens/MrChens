@@ -49,3 +49,17 @@ SwiftUI has two guiding principles for managing how data flows through your app:
 - `@EnvironmentObject` declares dependency on some shared data - data that's visible to all views in a subtree of the app. It's a convenient way to pass data indirectly instead of passing data from parent view to child to grandchild, especially if the in-between child view donesn't need it.
     - To be an EnvironmentObject, `xxx` must conform to the `ObservableObject` protocol. An `ObservableObject` is a publisher, like Timer.publisher.
     - To conform to `ObservableObject`, `xxx` must be a class, not a structure.
+
+- `@AppStorage` is a property wrapper, similar to @State and @Binding, that allows interaction between UserDefaults and your SwiftUI views.
+
+
+
+User data
+
+- Documents, The main documents directory for the app.
+- Library, The directory for files that you don't want to expose to the user.
+- 
+- SystemData
+- tmp
+
+App bundle
