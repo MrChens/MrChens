@@ -18,7 +18,7 @@ Here is my [blog](https://mrchens.github.io)
 ## 🤔 About me
 - 💼 I’m currently working on [MeetYou](https://www.meiyou.com)
 - ⚡  I'm currently interested in [handshake](https://www.namebase.io/register/aw4x9g) wich will create an Internet that’s more secure, censorship-resistant, seizure-resistant, private, and truly-owned by individuals not corporations. for more information please visiter [about handshake](https://www.namebase.io/about/)
-- 🌱 I’m currently learning swift, Design
+- 🌱 I’m currently learning Swift & SwiftUI, Design
 - 🔭 I'm plan to learn Illustrator 
 
 ## 🎓 Recommended books & IDE & Study link
