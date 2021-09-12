@@ -68,3 +68,19 @@ App bundle
 - `map(_:)`: similar to a for loop, map goes through each element individually, transforms the data to a new element and then comnines them all into a single array.
 - `fillter(_:)`:filter one array to another array
 - `reduce(_:_:)`:combines all the elements in an array into one value. `let result = [4, 2, 0].reduce(0) { runningTotal, value in runningTotal + value`
+
+
+### Tools for managing data
+- User interface values, like Boolean flags to show or hide views, text field text, slider or picker values.
+- Data model objects, often collections of objects that model the app's data, like daily logs of completed exercises.
+
+- Value types
+   - State
+   - Binding
+   - Environment
+   - environment
+- Object types ObservableObject
+   - StateObject
+   - ObservedObject
+   - environmentObject
+   - EnvironmentObject
