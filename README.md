@@ -41,6 +41,7 @@ Here is my [blog](https://mrchens.github.io)
 - [cs193p standford developing Applications for iOS using SwiftUI](https://cs193p.sites.stanford.edu)
 - [IM](http://www.52im.net/topic-tcpipvol1.html?mobile=no)
 - [designcode](https://designcode.io/swiftui-course)
+- [apple app-dev-training](https://developer.apple.com/tutorials/app-dev-training)
 
 ----
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact)
