@@ -20,3 +20,5 @@ coreData stack
   - Contexts are very territorial; once a managed objecg has been associated with a particular context, it will remain associated with the same context for the duration of its lifecycle.
   - An application can use more than one context - most non-trivial Core Data applications fall into this catgory. Since a context is an in-memory scratch pad for what's on disk, you can actually load the same Core Data object onto two defferent contexts simultaneously.
   - A context is not thread-safe. The same goes for managed object: You can only interact with contexts and managed objects on the same thread in which they were created.
+- NSPersistentContainer
+  - It's a container that holods everything together. Instead of wasting your time writing boilerplate code to wire up all four stack components together, you can simply initialize an NSPersistentContainer, load its persistent stores, and you're good to go.
