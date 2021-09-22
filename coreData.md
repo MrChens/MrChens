@@ -16,7 +16,7 @@ coreData stack
   - You do all of the work with your Core Data objects within a managed object context.
   - Any changes you make won't affect the underlying data on disk until you call save() on the context.
   - The context manages the lifecycle of the objects it creates or fetches. This lifecycle management includes powerful features such as faulting, inverse relationship handling and validation.
-  - Amanaged object cannot exist without an associated context. In fact, a managed object and its context are so tightly coupled that every managed object keeps a reference to its context, which can be accessed like so: `let managedContext = employee.managedObjectContext`
+  - A managed object cannot exist without an associated context. In fact, a managed object and its context are so tightly coupled that every managed object keeps a reference to its context, which can be accessed like so: `let managedContext = employee.managedObjectContext`
   - Contexts are very territorial; once a managed objecg has been associated with a particular context, it will remain associated with the same context for the duration of its lifecycle.
   - An application can use more than one context - most non-trivial Core Data applications fall into this catgory. Since a context is an in-memory scratch pad for what's on disk, you can actually load the same Core Data object onto two defferent contexts simultaneously.
   - A context is not thread-safe. The same goes for managed object: You can only interact with contexts and managed objects on the same thread in which they were created.
