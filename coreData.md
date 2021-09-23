@@ -1,4 +1,6 @@
-coreData stack
+[Core Data Programming Guide](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/index.html#//apple_ref/doc/uid/TP40001075-CH2-SW1)
+
+# coreData stack
 
 - NSManagedObjectModel
   - represents each object type in your app's data model, the properties they can have, and the relationships between them. like database of SQLite.
