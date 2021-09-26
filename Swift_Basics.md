@@ -8,6 +8,8 @@
 
 [imported_c_and_objective-c_apis](https://developer.apple.com/documentation/swift/imported_c_and_objective-c_apis)
 	
+[avoiding-race-conditions-in-swif](https://medium.com/swiftcairo/avoiding-race-conditions-in-swift-9ccef0ec0b26)
+	
 ## Swift Basics
 
 1. 注释
