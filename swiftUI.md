@@ -84,3 +84,90 @@ App bundle
    - ObservedObject
    - environmentObject
    - EnvironmentObject
+
+
+## NavigationLink
+如果2个list是上下结构(VStack)，那么当第一个NavigationLiknk从屏幕中不见，则就算你触发了它的selection，它还是不能响应。
+最好的办法是用ZStack
+
+```
+List {
+        Section {
+            NavigationLink(
+                destination: Text("1"),
+                label: {
+                    AboutRow(title: "常见问题")
+                })
+        }
+
+        Section {
+            NavigationLink(
+                destination: Text("2"),
+                    title: L10n.FlowMonitor.accurateStatistics),
+                label: {
+                    AboutRow(title: L10n.FlowMonitor.accurateStatistics)
+            })
+        }
+
+        Section {
+            NavigationLink(
+                destination: Text("3"),
+                    title: "隐私条款"),
+                label: {
+                    AboutRow(title: "隐私条款")
+            })
+        }
+}
+
+List {
+        Section {
+            Button(action: {
+                self.selection = .faq
+            }) {
+                HStack {
+                    Text("常见问题")
+                        .modifier(CustomFontModifier(size: 20))
+                    Spacer()
+                    Image(systemName: "arrow.right.circle")
+                }
+            }
+        }
+
+        Section {
+            Button(action: {
+                selection = .accurateStatistics
+            }) {
+                HStack {
+                    Text(L10n.FlowMonitor.accurateStatistics).modifier(CustomFontModifier(size: 20))
+                    Spacer()
+                    Image(systemName: "arrow.right.circle")
+                }
+            }
+        }
+
+        Section {
+            Button(action: {
+                selection = .privacy
+            }) {
+                HStack {
+                    Text("隐私条款")
+                        .modifier(CustomFontModifier(size: 20))
+                    Spacer()
+                    Image(systemName: "arrow.right.circle")
+                }
+            }
+        }
+
+        Section {
+            Button(action: shareButton) {
+                HStack {
+                    Text("分享应用")
+                        .modifier(CustomFontModifier(size: 20))
+                    Spacer()
+                    Image(systemName: "arrow.up.right.circle")
+                }
+            }
+        }
+}
+
+```
