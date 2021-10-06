@@ -5,6 +5,7 @@
 5. [Data Flow Through SwiftUI](https://developer.apple.com/videos/play/wwdc2019/226/)
 6. [sf-symbols](https://developer.apple.com/sf-symbols/)
 7. [Formatting Quick Help](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/SymbolDocumentation.html)
+8. [@state @](https://www.youtube.com/watch?v=stSB04C4iS4)
 
 
 
