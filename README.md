@@ -49,6 +49,10 @@ Here is my [blog](https://mrchens.github.io)
 - [apple app-dev-training](https://developer.apple.com/tutorials/app-dev-training)
 - [iOS-tech-frontier](https://github.com/hehonghui/iOS-tech-frontier)
 
+### Reader
+- [ascoders weekly](https://github.com/ascoders/weekly)
+
+
 ----
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact)
 ![](https://github-readme-stats.vercel.app/api?username=MrChens&show_icons=true&icon_color=0366d6&text_color=24292e&bg_color=ffffff&hide_title=true&layout=compact)
