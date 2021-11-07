@@ -48,6 +48,7 @@ Here is my [blog](https://mrchens.github.io)
 - [designcode](https://designcode.io/swiftui-course)
 - [apple app-dev-training](https://developer.apple.com/tutorials/app-dev-training)
 - [iOS-tech-frontier](https://github.com/hehonghui/iOS-tech-frontier)
+- [swift talk](https://talk.objc.io)
 
 ### Reader
 - [ascoders weekly](https://github.com/ascoders/weekly)
