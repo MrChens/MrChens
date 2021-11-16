@@ -40,7 +40,15 @@
 ###开发经验
 - UITableView优化：重用，多线程，gcd子线程处理数据，子线程model中预计算（计算label，在复杂cell中不用autolayout），预排版，避免对象在cellforrow中创建，异步绘制，图层混合优化（不透明，纯色）减少gpu立牌渲染
 - 模块化开发：猜想依赖注入，参数传递
-- URL scheme：
+- URL scheme：Deeplink跳转，scheme标记（不了解
+- runtime：run once（load时方法交换，不要太多逻辑）nsarray不越界，埋点（viewdidappear）。uicontrol-sendaction防止多次点击，无痕埋点，tableview delegate 交换didselect。
+- gcd：子线程：dispatch-group（多个请求同步）。信号量-保证同步进行，barrier（abcd task 顺序）
+- nsoperation：取消旧任务，执行新任务
+- wkwebview与js交互，url拦截，根据url中的信息来处理；分隔符拆分，了解方法注册
 
-  - 依赖：模块组件有依赖关系，可通过路由器进行模块之间的耦合问题。 deep
-  - 依赖：模块组件有依赖关系，可通过路由器进行模块之间的耦合问题。
+#
+的信息来处理；分隔符#
+的信息来处理；分隔符#
+的信息来处理；分隔符
+
+ 
