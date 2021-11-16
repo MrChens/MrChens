@@ -13,8 +13,8 @@ Here is my [blog](https://mrchens.github.io)
 
 ## 📮 How to contact me
 
-- WeChat:[Gakkiers](wechat://Gakkier)
-- Email:[Follow Up Here](mailto:mr_chens_job@outlook.com)
+- WeChat: [Gakkiers](wechat://Gakkier)
+- Email: [Follow Up Here](mailto:mr_chens_job@outlook.com)
 
 ## 🤔 About me
 - 💼 I’m currently working on [MeetYou](https://www.meiyou.com)
