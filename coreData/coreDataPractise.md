@@ -11,3 +11,10 @@
 - [QueryKit](https://github.com/QueryKit/QueryKit)
 - [CoreData](https://github.com/DeveloperErenLiu/CoreData)
 - [SugarRecord](https://github.com/modo-studio/SugarRecord)
+
+
+- NSPersistentStoreCoordinator(Persistent Store Coordinator)，缩写为PSC
+- NSManagedObjectContext(Managed Object Context)，缩写为MOC
+- NSManagedObjectModel(Managed Object Model)，缩写为MOM
+- NSManagedObject及其子类
+- 后缀名为.xcdatamodeld的文件，存储着所有实体的数据结构和表示，称之为模型文件
