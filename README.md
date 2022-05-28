@@ -54,6 +54,8 @@ Here is my [blog](https://mrchens.github.io)
 ### Reader
 - [ascoders weekly](https://github.com/ascoders/weekly)
 
+### Amusing
+- [beautify github profile](https://github.com/rzashakeri/beautify-github-profile)
 
 ----
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact)
