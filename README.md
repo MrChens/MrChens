@@ -50,6 +50,7 @@ Here is my [blog](https://mrchens.github.io)
 - [iOS-tech-frontier](https://github.com/hehonghui/iOS-tech-frontier)
 - [swift talk](https://talk.objc.io)
 - [iOS](https://github.com/TMFuny/iOS)
+- [Design](https://www.figma.cool/learning-paths)
 
 ### Reader
 - [ascoders weekly](https://github.com/ascoders/weekly)
