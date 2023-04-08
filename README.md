@@ -57,6 +57,7 @@ Here is my [blog](https://mrchens.github.io)
 
 ### Amusing
 - [beautify github profile](https://github.com/rzashakeri/beautify-github-profile)
+- [metrics](https://github.com/lowlighter/metrics)
 
 ----
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=MrChens&layout=compact)
@@ -65,7 +66,6 @@ Here is my [blog](https://mrchens.github.io)
 ### Profile Trophies
 ----
 [![trophy](https://github-profile-trophy.vercel.app/?username=MrChens)](https://github.com/ryo-ma/github-profile-trophy)
-[![metrics](https://github.com/lowlighter/metrics)](https://github.com/lowlighter/metrics)
 ----
 <!--
 **MrChens/MrChens** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
