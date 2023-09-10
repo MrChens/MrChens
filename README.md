@@ -7,8 +7,9 @@ Here is my [blog](https://mrchens.github.io)
 
 ## 💬  Language In use
 
+- ✅ ⁠ ⁢⁣⁡⁠ Swift 
 - ✅ ⁠ ⁢⁣⁡⁠ ⁢⁣⁡Objective-C
-- ✅ ⁠ ⁢⁣⁡⁠ Swift & SwiftUI
+- ✅   SwiftUI
 - ✅ ⁠ ⁢⁣⁡⁠ a litter in ⁢⁣⁡Python & Shell & JavaScript
 
 ## 📮 How to contact me
