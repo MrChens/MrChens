@@ -3,13 +3,13 @@
 ![ ](https://komarev.com/ghpvc/?username=MrChens)
 <!-- count - 1000 is the real count hahhaha -->
 ## Hi there 👋
-Here is my [blog](https://mrchens.github.io)
+~~Here is my [blog](https://mrchens.github.io)~~
 
 ## 💬  Language In use
 
 - ✅ ⁠ ⁢⁣⁡⁠ Swift 
-- ✅ ⁠ ⁢⁣⁡⁠ ⁢⁣⁡Objective-C
 - ✅   SwiftUI
+- ✅ ⁠ ⁢⁣⁡⁠ ⁢⁣⁡Objective-C
 - ✅ ⁠ ⁢⁣⁡⁠ a litter in ⁢⁣⁡Python & Shell & JavaScript
 
 ## 📮 How to contact me
