@@ -17,7 +17,9 @@
 - Email: [Follow Up Here](mailto:mr_chens_job@outlook.com)
 
 ## 🤔 About me
+<!--
 - 💼 I’m currently working on [Ubiquiti, Inc](https://www.ui.com.cn)
+-->
 - ⚡  I'm currently interested in [handshake](https://www.namebase.io/register/aw4x9g) wich will create an Internet that’s more secure, censorship-resistant, seizure-resistant, private, and truly-owned by individuals not corporations. for more information please visiter [about handshake](https://www.namebase.io/about/)
 - 🌱 I’m currently learning Swift & SwiftUI, Design
 - 🔭 I'm plan to learn Illustrator & Combine & Concurrency
